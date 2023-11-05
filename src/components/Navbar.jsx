@@ -1,20 +1,21 @@
 import { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import logo from "/workatlas.png"
+import logo from "/workatlas.png";
 import Swal from "sweetalert2";
+
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
+  ;
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   const handleLogOut = () => {
-    
     logOut();
-    navigate("/")
-    Swal.fire("Success!","User logged out successfully","success")
+    navigate("/");
+    Swal.fire("Success!", "User logged out successfully", "success");
   };
   const navLinks = (
     <>
@@ -193,9 +194,11 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
-          } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center`}
+          } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center `}
         >
-          <ul className="flex flex-col lg:flex-row lg:mx-6 lg:text-lg font-semibold">{navLinks}</ul>
+          <ul className="flex flex-col lg:flex-row lg:mx-6 lg:text-lg font-semibold">
+            {navLinks}
+          </ul>
         </div>
         <div>
           {user ? (
@@ -212,7 +215,7 @@ function Navbar() {
               </div>
               <button
                 onClick={handleLogOut}
-                className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg duration-300"
+                className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg  duration-300"
               >
                 Log Out
               </button>

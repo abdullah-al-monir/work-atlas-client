@@ -4,11 +4,14 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useDocumentTitle from "../../hooks/useTitle";
 
 const Login = () => {
   const { googleSignIn, signIn } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+  const title = "Work Atlas | Login";
+  useDocumentTitle(title);
   const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();

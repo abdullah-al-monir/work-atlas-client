@@ -5,10 +5,13 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useDocumentTitle from "../../hooks/useTitle";
 const Register = () => {
   const { googleSignIn, createUser, setUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  const title = "Work Atlas | Register";
+  useDocumentTitle(title);
   const navigate = useNavigate();
   const handleSignUp = (e) => {
     e.preventDefault();

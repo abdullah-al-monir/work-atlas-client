@@ -1,12 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { BsInfoCircle } from "react-icons/bs";
+import axios from "axios";
 const JobDetails = () => {
   const { user } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const job = useLoaderData();
   const {
     jobTitle,
@@ -19,6 +21,8 @@ const JobDetails = () => {
     companyLogo,
     jobBanner,
   } = job;
+  const deadline = new Date(applicationDeadline);
+  const presentDate = new Date();
   const openModal = () => {
     if (postedBy === user.displayName) {
       return Swal.fire(
@@ -40,12 +44,10 @@ const JobDetails = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-  const deadline = new Date(applicationDeadline);
-  const presentDate = new Date();
+
   const handleApplyJob = (e) => {
     e.preventDefault();
-    console.log(e)
-    const resume = e.target.resume.value
+    const resume = e.target.resume.value;
     const appliedJob = {
       email: user.email,
       jobTitle,
@@ -53,9 +55,15 @@ const JobDetails = () => {
       applyDate: presentDate,
       category,
       companyLogo,
-      resume
+      resume,
     };
-    console.log(appliedJob)
+    axios
+      .post("http://localhost:7000/appliedJobs", appliedJob)
+      .then(() => {
+        navigate("/appliedJobs");
+        Swal.fire("Great!", "Applied the job successfully", "success");
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <div className="my-20 mx-5">
@@ -179,6 +187,7 @@ const JobDetails = () => {
                         name="resume"
                         placeholder="Applicant's resume link"
                         className="block w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:border-primary focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-40 "
+                        required
                       />
                     </label>
                   </div>

@@ -1,20 +1,22 @@
 import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useCategories from "../../hooks/useCategories";
 import JobCard from "./JobCard";
+import { AuthContext } from "../../providers/AuthProvider";
 export function TabsDefault() {
+  const { setLoading } = useContext(AuthContext);
   const categories = useCategories();
-  console.log(categories);
   const [category, setCategory] = useState("On Site Job");
   const activeCategory = category;
-  console.log(category);
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:7000/jobsByCategory?category=${category}`)
       .then((res) => res.json())
-      .then((data) => setJobs(data));
-  }, [category]);
-  console.log(jobs);
+      .then((data) => {
+        setJobs(data);
+        setLoading(false);
+      });
+  }, [category, setLoading]);
   return (
     <Tabs value="html">
       <TabsHeader>
@@ -34,15 +36,11 @@ export function TabsDefault() {
         ))}
       </TabsHeader>
       <div>
-      {/* <motion.div
-         animate={{ x: [0, 100, 0] }}
-      > */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 justify-center items-center">
-            {jobs.map((job) => (
-              <JobCard key={job._id} job={job} />
-            ))}
-          </div>
-          {/* </motion.div> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 justify-center items-center">
+          {jobs.map((job) => (
+            <JobCard key={job._id} job={job} />
+          ))}
+        </div>
       </div>
     </Tabs>
   );
