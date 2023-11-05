@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const { googleSignIn, signIn, setUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -16,14 +17,14 @@ const Login = () => {
       .then(() => {
         navigate("/");
       })
-      .catch((error) => console.log(error));
+      .catch(() => setError("Invalid email or password"));
   };
   const handleGoogleLogin = () => {
     googleSignIn()
-      .then((data) => {
-        console.log(data.user);
+      .then(() => {
+        navigate("/");
       })
-      .catch((error) => console.log(error));
+      .catch(() => setError("Sorry! Something went wrong"));
   };
   return (
     <section>
@@ -38,20 +39,22 @@ const Login = () => {
                       Login
                     </h3>
                   </div>
-                  <div className="mt-4 text-base text-gray-500">
-                    <p>Login and get our newest circular.</p>
-                  </div>
                 </div>
               </div>
-
+              {error && (
+                <div className="mt-5 w-full block px-10 py-3.5 text-base font-medium text-center text-red-500 transition duration-500 ease-in-out transform border-2 border-red-500 shadow-red-500 shadow-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                  <p>{error}</p>
+                </div>
+              )}
               <form onSubmit={handleSignIn} className="mt-6 space-y-2">
                 <div>
                   <label className="">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out border border-primary rounded-lg bg-gray-50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                     placeholder="Enter your email"
+                    required
                   />
                 </div>
                 <div>
@@ -62,6 +65,7 @@ const Login = () => {
                       name="password"
                       className="block w-full px-5 py-3 text-base text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out border border-primary rounded-lg bg-gray-50 focus:outline-none focus:border-secondary focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                       placeholder="Enter your password"
+                      required
                     />
                     <button
                       className="text-lg absolute right-3 top-3 "
@@ -94,21 +98,17 @@ const Login = () => {
                 <div className="mb-5">
                   <h2>
                     Don't have an account?{" "}
-                    <Link
-                      className="text-primary font-semibold"
-                      to="/register"
-                    >
+                    <Link className="text-primary font-semibold" to="/register">
                       Register
                     </Link>
                   </h2>
                 </div>
                 <div className="flex flex-col mt-4 lg:space-y-2">
-                  <button
-                    type="button"
+                  <input
+                    type="submit"
+                    value="Login"
                     className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out bg-primary rounded-xl hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                  >
-                    Login
-                  </button>
+                  />
                 </div>
               </form>
               <div className="relative my-4">
