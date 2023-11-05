@@ -3,6 +3,7 @@ import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { googleSignIn, signIn } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const Login = () => {
     signIn(email, password)
       .then(() => {
         navigate("/");
+        Swal.fire("Success!","User logged in successfully","success")
       })
       .catch(() => setError("Invalid email or password"));
   };
@@ -24,6 +26,7 @@ const Login = () => {
     googleSignIn()
       .then(() => {
         navigate("/");
+        Swal.fire("Success!","User logged in successfully using Google.","success")
       })
       .catch(() => setError("Sorry! Something went wrong"));
   };

@@ -1,15 +1,20 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import logo from "/workatlas.png"
+import Swal from "sweetalert2";
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   const handleLogOut = () => {
+    
     logOut();
+    navigate("/")
+    Swal.fire("Success!","User logged out successfully","success")
   };
   const navLinks = (
     <>
@@ -89,7 +94,7 @@ function Navbar() {
           <li>
             <button
               onClick={handleLogOut}
-              className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg lg:hidden mx-4 my-1"
+              className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg lg:hidden mx-4 my-1 duration-300"
             >
               Log Out
             </button>
@@ -105,7 +110,7 @@ function Navbar() {
                   ? "pending"
                   : isActive
                   ? " block  bg-secondary py-1 px-4  rounded-lg"
-                  : " block  bg-primary hover:bg-secondary py-1 px-4 rounded-lg"
+                  : " block  bg-primary hover:bg-secondary py-1 px-4 rounded-lg duration-300"
               }
             >
               Login
@@ -207,7 +212,7 @@ function Navbar() {
               </div>
               <button
                 onClick={handleLogOut}
-                className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg"
+                className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg duration-300"
               >
                 Log Out
               </button>
@@ -221,7 +226,7 @@ function Navbar() {
                     ? "pending"
                     : isActive
                     ? " block  bg-secondary py-2 px-4  rounded-lg"
-                    : " block  bg-primary hover:bg-secondary py-2 px-4 rounded-lg"
+                    : " block  bg-primary hover:bg-secondary py-2 px-4 rounded-lg duration-300"
                 }
               >
                 Login

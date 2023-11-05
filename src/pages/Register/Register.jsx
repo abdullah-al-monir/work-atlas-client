@@ -3,10 +3,13 @@ import { FcGoogle } from "react-icons/fc";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 const Register = () => {
   const { googleSignIn, createUser, setUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,24 +17,40 @@ const Register = () => {
     const email = form.email.value;
     const photo = form.photo.value;
     const password = form.password.value;
-    const user = { name, email, password };
-    console.log(user);
-    createUser(email, password).then((result) => {
-      const user = result.user;
-      updateProfile(user, { displayName: name, photoURL: photo }).then(() => {
-        setUser((currentUser) => {
-          currentUser.displayName = name;
-          currentUser.photoURL = photo;
+    if (password.length < 6) {
+      return setError(
+        "Password is not valid. It should be at least 6 characters long and consist of letters and numbers."
+      );
+    }
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        updateProfile(user, { displayName: name, photoURL: photo }).then(() => {
+          setUser((currentUser) => {
+            currentUser.displayName = name;
+            currentUser.photoURL = photo;
+            navigate("/");
+            Swal.fire(
+              "Success!",
+              "User has been registered successfully",
+              "success"
+            );
+          });
         });
-      });
-    });
+      })
+      .catch(() => setError("Sorry! Something went wrong"));
   };
   const handleGoogleLogin = () => {
     googleSignIn()
-      .then((data) => {
-        console.log(data.user);
+      .then(() => {
+        navigate("/");
+        Swal.fire(
+          "Success!",
+          "User logged in successfully by using Google.",
+          "success"
+        );
       })
-      .catch((error) => console.log(error));
+      .catch(() => setError("Sorry! Something went wrong"));
   };
   return (
     <section className="max-w-screen-xl mx-auto">
@@ -125,6 +144,11 @@ const Register = () => {
                     </h2>
                   </div>
                 </div>
+                {error && (
+                  <div className="mt-5 w-full block px-10 py-3.5 text-base font-medium text-center text-red-500 transition duration-500 ease-in-out transform border-2 border-red-500 shadow-red-500 shadow-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                    <p>{error}</p>
+                  </div>
+                )}
                 <div>
                   <input
                     type="submit"

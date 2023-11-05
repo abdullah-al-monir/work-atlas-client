@@ -36,7 +36,7 @@ const JobCard = ({ job }) => {
             </p>
           </div>
           <Link to={`job/${_id}`}>
-            <button className="bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg">
+            <button className="bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg duration-300">
               View Details
             </button>
           </Link>
