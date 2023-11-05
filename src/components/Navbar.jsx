@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-
+import logo from "/workatlas.png"
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -120,7 +120,7 @@ function Navbar() {
       <div className="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img className="w-auto h-6 sm:h-7" src="workatlas.png" alt="" />
+            <img className="w-auto h-6 sm:h-7" src={logo} alt="" />
             <h2
               className="font-bold text-lg uppercase"
               style={{
