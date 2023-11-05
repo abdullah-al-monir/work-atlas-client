@@ -2,7 +2,6 @@ import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import useCategories from "../../hooks/useCategories";
 import JobCard from "./JobCard";
-import { motion } from "framer-motion";
 export function TabsDefault() {
   const categories = useCategories();
   console.log(categories);
@@ -26,8 +25,8 @@ export function TabsDefault() {
             onClick={() => setCategory(category.category)}
             className={
               category.category === activeCategory
-                ? "bg-white text-secondary text-lg font-semibold"
-                : "text-primary text-lg font-semibold"
+                ? "bg-white text-secondary md:text-lg font-semibold"
+                : "text-primary md:text-lg font-semibold hover:text-secondary"
             }
           >
             {category.category}

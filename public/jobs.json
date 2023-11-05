@@ -1,0 +1,222 @@
+[
+  {
+    "postedBy": "John Doe",
+    "jobTitle": "Software Engineer",
+    "postingDate": "2023-11-05",
+    "applicationDeadline": "2023-12-11",
+    "salaryRange": "$80,000 - $100,000 per year",
+    "NumberOfApplicants": 50,
+    "jobDetails": "We are looking for a talented software engineer to join our team...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 1"
+  },
+  {
+    "postedBy": "Jane Smith",
+    "jobTitle": "Data Analyst",
+    "postingDate": "2023-11-07",
+    "applicationDeadline": "2023-12-12",
+    "salaryRange": "$60,000 - $80,000 per year",
+    "NumberOfApplicants": 35,
+    "jobDetails": "Join our data analytics team and make a difference...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 2"
+  },
+  {
+    "postedBy": "Mike Johnson",
+    "jobTitle": "Frontend Developer",
+    "postingDate": "2023-11-10",
+    "applicationDeadline": "2023-12-15",
+    "salaryRange": "$70,000 - $90,000 per year",
+    "NumberOfApplicants": 45,
+    "jobDetails": "We're seeking a skilled frontend developer to enhance our web applications...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 3"
+  },
+  {
+    "postedBy": "Laura Lee",
+    "jobTitle": "Digital Marketing Specialist",
+    "postingDate": "2023-11-13",
+    "applicationDeadline": "2023-12-18",
+    "salaryRange": "$50,000 - $70,000 per year",
+    "NumberOfApplicants": 25,
+    "jobDetails": "Join our marketing team and create compelling digital marketing campaigns...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 4"
+  },
+  {
+    "postedBy": "Robert Brown",
+    "jobTitle": "Remote Backend Developer",
+    "postingDate": "2023-11-06",
+    "applicationDeadline": "2023-12-11",
+    "salaryRange": "$90,000 - $110,000 per year",
+    "NumberOfApplicants": 30,
+    "jobDetails": "We're hiring a backend developer to work remotely on exciting projects...",
+    "category": "Remote Job",
+    "jobBanner": "Banner 5"
+  },
+  {
+    "postedBy": "Sarah Green",
+    "jobTitle": "Hybrid UI/UX Designer",
+    "postingDate": "2023-11-08",
+    "applicationDeadline": "2023-12-13",
+    "salaryRange": "$75,000 - $95,000 per year",
+    "NumberOfApplicants": 40,
+    "jobDetails": "Join our hybrid team as a UI/UX designer and contribute to both onsite and remote projects...",
+    "category": "Hybrid",
+    "jobBanner": "Banner 6"
+  },
+  {
+    "postedBy": "Daniel White",
+    "jobTitle": "Part Time Customer Support",
+    "postingDate": "2023-11-11",
+    "applicationDeadline": "2023-12-16",
+    "salaryRange": "$25 - $30 per hour",
+    "NumberOfApplicants": 15,
+    "jobDetails": "We're seeking part-time customer support agents to assist our customers...",
+    "category": "Part Time",
+    "jobBanner": "Banner 7"
+  },
+  {
+    "postedBy": "Emily Clark",
+    "jobTitle": "On Site Graphic Designer",
+    "postingDate": "2023-11-14",
+    "applicationDeadline": "2023-12-19",
+    "salaryRange": "$60,000 - $80,000 per year",
+    "NumberOfApplicants": 28,
+    "jobDetails": "Join our onsite team as a graphic designer and create stunning visual content...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 8"
+  },
+  {
+    "postedBy": "David Martin",
+    "jobTitle": "Remote Project Manager",
+    "postingDate": "2023-11-09",
+    "applicationDeadline": "2023-12-14",
+    "salaryRange": "$100,000 - $120,000 per year",
+    "NumberOfApplicants": 42,
+    "jobDetails": "We're looking for a remote project manager to lead our teams from anywhere...",
+    "category": "Remote Job",
+    "jobBanner": "Banner 9"
+  },
+  {
+    "postedBy": "Olivia Taylor",
+    "jobTitle": "Hybrid Marketing Coordinator",
+    "postingDate": "2023-11-12",
+    "applicationDeadline": "2023-12-17",
+    "salaryRange": "$70,000 - $90,000 per year",
+    "NumberOfApplicants": 38,
+    "jobDetails": "Join our hybrid marketing team and drive our marketing initiatives...",
+    "category": "Hybrid",
+    "jobBanner": "Banner 10"
+  },
+  {
+    "postedBy": "James Anderson",
+    "jobTitle": "Part Time Content Writer",
+    "postingDate": "2023-11-15",
+    "applicationDeadline": "2023-12-20",
+    "salaryRange": "$20 - $25 per hour",
+    "NumberOfApplicants": 20,
+    "jobDetails": "We're hiring part-time content writers to create engaging and informative content...",
+    "category": "Part Time",
+    "jobBanner": "Banner 11"
+  },
+  {
+    "postedBy": "Ava Hernandez",
+    "jobTitle": "On Site Product Manager",
+    "postingDate": "2023-11-19",
+    "applicationDeadline": "2023-12-24",
+    "salaryRange": "$80,000 - $100,000 per year",
+    "NumberOfApplicants": 48,
+    "jobDetails": "Join our product management team and drive the success of our products...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 12"
+  },
+  {
+    "postedBy": "Michael Davis",
+    "jobTitle": "Remote Software Developer",
+    "postingDate": "2023-11-20",
+    "applicationDeadline": "2023-12-25",
+    "salaryRange": "$85,000 - $105,000 per year",
+    "NumberOfApplicants": 33,
+    "jobDetails": "We're seeking remote software developers to work on innovative projects...",
+    "category": "Remote Job",
+    "jobBanner": "Banner 13"
+  },
+  {
+    "postedBy": "Sophia Lewis",
+    "jobTitle": "Hybrid Data Scientist",
+    "postingDate": "2023-11-23",
+    "applicationDeadline": "2023-12-28",
+    "salaryRange": "$90,000 - $110,000 per year",
+    "NumberOfApplicants": 41,
+    "jobDetails": "Join our hybrid team as a data scientist and analyze data for meaningful insights...",
+    "category": "Hybrid",
+    "jobBanner": "Banner 14"
+  },
+  {
+    "postedBy": "William Turner",
+    "jobTitle": "Part Time Social Media Manager",
+    "postingDate": "2023-11-25",
+    "applicationDeadline": "2023-12-30",
+    "salaryRange": "$22 - $28 per hour",
+    "NumberOfApplicants": 18,
+    "jobDetails": "We're hiring a part-time social media manager to manage our social media channels...",
+    "category": "Part Time",
+    "jobBanner": "Banner 15"
+  },
+  {
+    "postedBy": "Elizabeth Moore",
+    "jobTitle": "On Site UX Designer",
+    "postingDate": "2023-05-03",
+    "applicationDeadline": "2023-06-03",
+    "salaryRange": "$70,000 - $90,000 per year",
+    "NumberOfApplicants": 34,
+    "jobDetails": "Join our onsite team as a UX designer and enhance user experiences...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 16"
+  },
+  {
+    "postedBy": "Liam Garcia",
+    "jobTitle": "Remote Marketing Manager",
+    "postingDate": "2023-05-06",
+    "applicationDeadline": "2023-06-06",
+    "salaryRange": "$95,000 - $115,000 per year",
+    "NumberOfApplicants": 37,
+    "jobDetails": "We're looking for a remote marketing manager to lead our marketing efforts...",
+    "category": "Remote Job",
+    "jobBanner": "Banner 17"
+  },
+  {
+    "postedBy": "Mia Martinez",
+    "jobTitle": "Hybrid Sales Representative",
+    "postingDate": "2023-05-09",
+    "applicationDeadline": "2023-06-09",
+    "salaryRange": "$75,000 - $95,000 per year",
+    "NumberOfApplicants": 46,
+    "jobDetails": "Join our hybrid team as a sales representative and drive sales growth...",
+    "category": "Hybrid",
+    "jobBanner": "Banner 18"
+  },
+  {
+    "postedBy": "Benjamin Clark",
+    "jobTitle": "Part Time Data Entry Clerk",
+    "postingDate": "2023-05-12",
+    "applicationDeadline": "2023-06-12",
+    "salaryRange": "$18 - $22 per hour",
+    "NumberOfApplicants": 22,
+    "jobDetails": "We're hiring a part-time data entry clerk to maintain and update data records...",
+    "category": "Part Time",
+    "jobBanner": "Banner 19"
+  },
+  {
+    "postedBy": "Oliver Adams",
+    "jobTitle": "On Site Project Coordinator",
+    "postingDate": "2023-05-15",
+    "applicationDeadline": "2023-06-15",
+    "salaryRange": "$65,000 - $85,000 per year",
+    "NumberOfApplicants": 32,
+    "jobDetails": "Join our onsite team as a project coordinator and oversee project management...",
+    "category": "On Site Job",
+    "jobBanner": "Banner 20"
+  }
+]

@@ -1,10 +1,4 @@
-// const JobCard = ({ job }) => {
-//   const { postedBy, jobTitle, salaryRange, postingDate, applicationDeadline } =
-//     job;
-//   return <div>{jobTitle}</div>;
-// };
 
-// export default JobCard;
 import { motion } from "framer-motion";
 
 const JobCard = ({ job }) => {
@@ -30,7 +24,7 @@ const JobCard = ({ job }) => {
           </p>
         </div>
         <button className="bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg">
-          View details
+          View Details
         </button>
       </div>
       </motion.div>
