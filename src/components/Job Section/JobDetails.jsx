@@ -20,6 +20,8 @@ const JobDetails = () => {
     category,
     companyLogo,
     jobBanner,
+    NumberOfApplicants,
+    _id,
   } = job;
   const deadline = new Date(applicationDeadline);
   const presentDate = new Date();
@@ -56,6 +58,7 @@ const JobDetails = () => {
       category,
       companyLogo,
       resume,
+      NumberOfApplicants,
     };
     axios
       .post("http://localhost:7000/appliedJobs", appliedJob)
@@ -64,6 +67,8 @@ const JobDetails = () => {
         Swal.fire("Great!", "Applied the job successfully", "success");
       })
       .catch((err) => console.log(err));
+    // to increase the applican
+    axios.patch(`http://localhost:7000/applied/${_id}`, job);
   };
   return (
     <div className="my-20 mx-5">
@@ -96,6 +101,9 @@ const JobDetails = () => {
             </p>
             <p className="mt-2 text-sm  dark:text-gray-400">
               Salary: {salaryRange}
+            </p>
+            <p className="mt-2 text-sm  dark:text-gray-400">
+              Number of Applicants: {NumberOfApplicants}
             </p>
           </div>
 
