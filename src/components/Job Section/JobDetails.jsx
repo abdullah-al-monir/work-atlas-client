@@ -22,11 +22,12 @@ const JobDetails = () => {
     jobBanner,
     NumberOfApplicants,
     _id,
+    userId,
   } = job;
   const deadline = new Date(applicationDeadline);
   const presentDate = new Date();
   const openModal = () => {
-    if (postedBy === user.displayName) {
+    if (userId === user.uid) {
       return Swal.fire(
         "Oops!",
         "Sorry! You can't apply for your own job post.",
@@ -58,7 +59,7 @@ const JobDetails = () => {
       category,
       companyLogo,
       resume,
-      NumberOfApplicants,
+      NumberOfApplicants: NumberOfApplicants + 1,
     };
     axios
       .post("http://localhost:7000/appliedJobs", appliedJob)
@@ -82,9 +83,10 @@ const JobDetails = () => {
         <div className="p-6">
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-medium text-primary uppercase">
+              <span className="text-sm font-medium text-primary uppercase">
                 {category}
               </span>
+              {category !== ("On SIte Job" || "Remote Job") && <span>Job</span>}
               <p>by</p>
               <img className="h-6" src={companyLogo} alt="" />
             </div>
@@ -100,7 +102,8 @@ const JobDetails = () => {
               {jobDetails}
             </p>
             <p className="mt-2 text-sm  dark:text-gray-400">
-              Salary: {salaryRange}
+              Salary Range: ${salaryRange}{" "}
+              {category !== "Part Time" && <span>per year</span>}
             </p>
             <p className="mt-2 text-sm  dark:text-gray-400">
               Number of Applicants: {NumberOfApplicants}

@@ -4,223 +4,241 @@
     "jobTitle": "Software Engineer",
     "postingDate": "2023-11-05",
     "applicationDeadline": "2023-12-11",
-    "salaryRange": "$80,000 - $100,000 per year",
+    "salaryRange": "80,000 - 100,000",
     "NumberOfApplicants": 50,
     "jobDetails": "We are actively seeking a highly skilled and motivated software engineer to join our dynamic and innovative team. As a key member of our organization, you will play a pivotal role in designing, developing, and maintaining cutting-edge software solutions that drive our company's success.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/Z8LK5g6/Microsoft-Software-Engineer-Recruitment-Drive.png",
-    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
+    "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+    "userId": "AqM1gN9O"
   },
   {
     "postedBy": "Jane Smith",
     "jobTitle": "Data Analyst",
     "postingDate": "2023-11-07",
     "applicationDeadline": "2023-12-12",
-    "salaryRange": "$60,000 - $80,000 per year",
+    "salaryRange": "60,000 - 80,000",
     "NumberOfApplicants": 35,
     "jobDetails": "Join our Data Analytics team and embark on a rewarding journey where your skills and expertise will drive meaningful change. As a crucial member of our team, you will be at the forefront of harnessing the power of data to shape strategies, enhance decision-making, and impact the future of our organization.",
     "category": "On Site Job",
     "jobBanner": "https://images.unsplash.com/photo-1599658880436-c61792e70672",
-    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png"
+    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png",
+    "userId": "ZbU5pWvS"
   },
   {
     "postedBy": "Mike Johnson",
     "jobTitle": "Frontend Developer",
     "postingDate": "2023-11-10",
     "applicationDeadline": "2023-12-15",
-    "salaryRange": "$70,000 - $90,000 per year",
+    "salaryRange": "70,000 - 90,000",
     "NumberOfApplicants": 45,
     "jobDetails": "We are in search of a highly skilled Frontend Developer to join our team and take our web applications to the next level. As an essential member of our organization, you will be instrumental in enhancing the user experience, ensuring the functionality of our web applications, and contributing to their aesthetic appeal.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/7nV2rPn/frontend-developer-typographic-header-website-interface-design-improvement-web-page-programming-codi.jpg",
-    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png"
+    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png",
+    "userId": "ZbU5pWvS"
   },
   {
     "postedBy": "Laura Lee",
     "jobTitle": "Digital Marketing Specialist",
     "postingDate": "2023-11-13",
     "applicationDeadline": "2023-12-18",
-    "salaryRange": "$50,000 - $70,000 per year",
+    "salaryRange": "50,000 - 70,000",
     "NumberOfApplicants": 25,
     "jobDetails": "Join our vibrant and innovative marketing team, where you'll have the opportunity to craft compelling digital marketing campaigns that leave a lasting impression. As a valuable member of our organization, you'll play a pivotal role in shaping our brand's online presence, engaging our audience, and driving meaningful results.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/sVqq7sG/marketing-illustartion-concept-idea-business-growth-media-613284-3313.jpg",
-    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png"
+    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png",
+    "userId": "ZbU5pWvS"
   },
   {
     "postedBy": "Robert Brown",
     "jobTitle": "Backend Developer",
     "postingDate": "2023-11-06",
     "applicationDeadline": "2023-12-11",
-    "salaryRange": "$90,000 - $110,000 per year",
+    "salaryRange": "90,000 - 110,000",
     "NumberOfApplicants": 30,
     "jobDetails": "We are excited to announce an opportunity for a talented Backend Developer to join our team and work remotely on a range of exciting and impactful projects. As a crucial member of our organization, you will have the opportunity to shape the backend architecture, develop robust server-side solutions, and make a real difference in the success of our projects.",
     "category": "Remote Job",
     "jobBanner": "https://i.ibb.co/RgB9vYV/back-end-typographic-header-software-development-process-website-interface-design-improvement-progra.jpg",
-    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png"
+    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png",
+    "userId": "ZbU5pWvS"
   },
   {
     "postedBy": "Sarah Green",
     "jobTitle": "UI/UX Designer",
     "postingDate": "2023-11-08",
     "applicationDeadline": "2023-12-13",
-    "salaryRange": "$75,000 - $95,000 per year",
+    "salaryRange": "75,000 - 95,000",
     "NumberOfApplicants": 40,
     "jobDetails": "Embark on an exciting career journey by joining our versatile hybrid team as a UI/UX designer. This is your opportunity to make a significant impact on a wide range of projects, whether you are working onsite or remotely. As a key member of our organization, you will play a vital role in crafting exceptional user interfaces and experiences that resonate with our audience.",
     "category": "Hybrid",
     "jobBanner": "https://i.ibb.co/r4ZhkSW/gradient-ui-ux-background-23-2149052117.jpg",
-    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png"
+    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png",
+    "userId": "ZbU5pWvS"
   },
   {
     "postedBy": "Daniel White",
     "jobTitle": "Customer Support",
     "postingDate": "2023-11-11",
     "applicationDeadline": "2023-12-16",
-    "salaryRange": "$25 - $30 per hour",
+    "salaryRange": "25 - 30 per hour",
     "NumberOfApplicants": 15,
     "jobDetails": "We are actively searching for dedicated and part-time Customer Support Agents to join our team and provide exceptional assistance to our valued customers. As an integral part of our customer support team, you will play a crucial role in delivering outstanding service and ensuring customer satisfaction.",
     "category": "Part Time",
     "jobBanner": "https://i.ibb.co/m90qWR0/flat-design-illustration-customer-support-23-2148887720.jpg",
-    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png"
+    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png",
+    "userId": "OiC2lTxZ"
   },
   {
     "postedBy": "Emily Clark",
     "jobTitle": "Graphic Designer",
     "postingDate": "2023-11-14",
     "applicationDeadline": "2023-12-19",
-    "salaryRange": "$60,000 - $80,000 per year",
+    "salaryRange": "60,000 - 80,000",
     "NumberOfApplicants": 28,
     "jobDetails": "Join our dynamic onsite team as a Graphic Designer and take the opportunity to craft stunning visual content that captivates and resonates with our audience. As an essential member of our creative department, you will play a pivotal role in shaping our brand's visual identity and enhancing the overall aesthetic appeal of our projects.",
     "category": "On Site Job",
     "jobBanner": "https://img.freepik.com/free-vector/add-color-concept-illustration_114360-5604.jpg",
-    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png"
+    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png",
+    "userId": "eG4uQnY6"
   },
   {
     "postedBy": "David Martin",
     "jobTitle": "Project Manager",
     "postingDate": "2023-11-09",
     "applicationDeadline": "2023-12-14",
-    "salaryRange": "$100,000 - $120,000 per year",
+    "salaryRange": "100,000 - 120,000",
     "NumberOfApplicants": 42,
     "jobDetails": "We are actively in search of a Remote Project Manager to take the helm and lead our teams from anywhere in the world. As a vital member of our organization, you will play a central role in orchestrating and delivering successful projects, ensuring that our objectives are met, and our teams are guided to excellence.",
     "category": "Remote Job",
     "jobBanner": "https://i.ibb.co/kKXvwMQ/business-team-discussing-ideas-startup-74855-4380.jpg",
-    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png"
+    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png",
+    "userId": "eG4uQnY6"
   },
   {
     "postedBy": "Olivia Taylor",
     "jobTitle": "Marketing Coordinator",
     "postingDate": "2023-11-12",
     "applicationDeadline": "2023-12-17",
-    "salaryRange": "$70,000 - $90,000 per year",
+    "salaryRange": "70,000 - 90,000",
     "NumberOfApplicants": 38,
     "jobDetails": "Step into a dynamic role by joining our innovative Hybrid Marketing Team, where you can take the lead in driving our marketing initiatives to new heights. As a valued member of our organization, you will play a pivotal role in shaping our brand's presence and ensuring that our marketing strategies are impactful, both online and offline.",
     "category": "Hybrid",
     "jobBanner": "https://i.ibb.co/jkK7rJ2/online-business-concept-people-forming-business-internet-ecommerce-idea-digital-sale-advertising-set.jpg",
-    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png"
+    "companyLogo": "https://i.ibb.co/DLNmX7Y/Daraz-Logo.png",
+    "userId": "eG4uQnY6"
   },
   {
     "postedBy": "James Anderson",
     "jobTitle": "Part Time Content Writer",
     "postingDate": "2023-11-15",
     "applicationDeadline": "2023-12-20",
-    "salaryRange": "$20 - $25 per hour",
+    "salaryRange": "20 - 25 per hour",
     "NumberOfApplicants": 20,
     "jobDetails": "We are actively seeking talented Part-Time Content Writers to join our team and contribute to the creation of engaging and informative content that resonates with our audience. As an essential part of our content creation team, you will have the opportunity to craft well-crafted articles, blog posts, and more, making a meaningful impact on our content strategy.",
     "category": "Part Time",
     "jobBanner": "https://i.ibb.co/Fq2bXtV/isometric-journalist-concept-with-laptop-video-blogger-equipment-vector-illustration-1284-75313.jpg",
-    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png"
+    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png",
+    "userId": "dU3vWqA4"
   },
   {
     "postedBy": "Ava Hernandez",
     "jobTitle": "Product Manager",
     "postingDate": "2023-11-19",
     "applicationDeadline": "2023-12-24",
-    "salaryRange": "$80,000 - $100,000 per year",
+    "salaryRange": "80,000 - 100,000",
     "NumberOfApplicants": 48,
     "jobDetails": "Unlock the potential of our products by joining our dynamic product management team. Your vision and strategic acumen will be the guiding force behind our product innovations. Together, we will shape the future, drive success, and make a lasting impact. Join us in this exciting journey toward excellence.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/9rvDbqk/product-presentation-concept-illustration-114360-8416.jpg",
-    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png"
+    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png",
+    "userId": "dU3vWqA4"
   },
   {
     "postedBy": "Michael Davis",
     "jobTitle": "Software Developer",
     "postingDate": "2023-11-20",
     "applicationDeadline": "2023-12-25",
-    "salaryRange": "$85,000 - $105,000 per year",
+    "salaryRange": "85,000 - 105,000",
     "NumberOfApplicants": 33,
     "jobDetails": "Join our remote software development team and work on cutting-edge projects from anywhere. Your skills, creativity, and remote contributions will drive our success in creating innovative solutions. If you're passionate about making an impact through software development and prefer remote work, this role is a perfect match. Join us in our mission for innovation.",
     "category": "Remote Job",
     "jobBanner": "https://i.ibb.co/wgzQMxW/rear-view-programmer-working-all-night-long-1098-18697.jpg",
-    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png"
+    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png",
+    "userId": "RnL6iXpO"
   },
   {
     "postedBy": "Sophia Lewis",
     "jobTitle": "Data Scientist",
     "postingDate": "2023-11-23",
     "applicationDeadline": "2023-12-28",
-    "salaryRange": "$90,000 - $110,000 per year",
+    "salaryRange": "90,000 - 110,000",
     "NumberOfApplicants": 41,
     "jobDetails": "Join our hybrid team as a Data Scientist and play a critical role in analyzing data to extract valuable insights. Your analytical skills and data expertise will drive our decision-making and innovation. With a mix of onsite and remote collaboration, you'll make a significant impact on our organization's growth. Join us on this data-driven journey.",
     "category": "Hybrid",
     "jobBanner": "https://i.ibb.co/qyDyCNY/artificial-intelligence-used-generate-images-collage-23-2150738213.jpg",
-    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png"
+    "companyLogo": "https://i.ibb.co/1033yf1/pngegg-1.png",
+    "userId": "RnL6iXpO"
   },
   {
     "postedBy": "William Turner",
     "jobTitle": "Social Media Manager",
     "postingDate": "2023-11-25",
     "applicationDeadline": "2023-12-30",
-    "salaryRange": "$22 - $28 per hour",
+    "salaryRange": "22 - 28 per hour",
     "NumberOfApplicants": 18,
     "jobDetails": "Join our team as a part-time Social Media Manager and take charge of our social media channels. Your creativity and expertise will drive engagement, build our online presence, and connect with our audience. This flexible part-time role allows you to shape our social media strategy and make a meaningful impact. Join us in shaping our online brand.",
     "category": "Part Time",
     "jobBanner": "https://i.ibb.co/RhhXhXm/structure-social-media-with-colored-icons-1134-73.jpg",
-    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png"
+    "companyLogo": "https://i.ibb.co/RyXp1JC/pngegg-2.png",
+    "userId": "RnL6iXpO"
   },
   {
     "postedBy": "Elizabeth Moore",
     "jobTitle": "UX Designer",
     "postingDate": "2023-05-03",
     "applicationDeadline": "2023-06-03",
-    "salaryRange": "$70,000 - $90,000 per year",
+    "salaryRange": "70,000 - 90,000",
     "NumberOfApplicants": 34,
     "jobDetails": "Be a part of our onsite team as a UX Designer and play a pivotal role in elevating user experiences. Your creativity and design skills will shape intuitive interfaces and engage our audience. Join our collaborative environment and have a direct impact on our product's success. Join us in creating outstanding user experiences.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/0XtkhZp/mobile-ui-ux-concept-illustration-114360-11697.jpg",
-    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png"
+    "companyLogo": "https://i.ibb.co/8PQxHJN/slack-logo-png-1.png",
+    "userId": "RnL6iXpO"
   },
   {
     "postedBy": "Liam Garcia",
     "jobTitle": "Marketing Manager",
     "postingDate": "2023-05-06",
     "applicationDeadline": "2023-06-06",
-    "salaryRange": "$95,000 - $115,000 per year",
+    "salaryRange": "95,000 - 115,000",
     "NumberOfApplicants": 37,
     "jobDetails": "Join our team as a Remote Marketing Manager and lead our marketing efforts from anywhere. Your strategic vision and leadership will drive our campaigns to success, and your passion for innovation will shape our brand's growth. We value remote work flexibility and encourage your creative input in our marketing initiatives. If you're excited about making a meaningful impact through remote marketing leadership, this role is an ideal match. Join us in our journey to excel in the world of marketing.",
     "category": "Remote Job",
     "jobBanner": "https://i.ibb.co/41StyQd/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display-48225.jpg",
-    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png"
+    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png",
+    "userId": "tY8sGfZ2"
   },
   {
     "postedBy": "Mia Martinez",
     "jobTitle": "Sales Representative",
     "postingDate": "2023-05-09",
     "applicationDeadline": "2023-06-09",
-    "salaryRange": "$75,000 - $95,000 per year",
+    "salaryRange": "75,000 - 95,000",
     "NumberOfApplicants": 46,
     "jobDetails": "Join our dynamic hybrid team as a Sales Representative and be the driving force behind our sales growth. Your sales acumen, communication skills, and ability to adapt to onsite and remote environments will play a pivotal role in expanding our customer base. Collaborate with a motivated team of professionals who share your dedication to exceeding sales targets. We value the flexibility of a hybrid work model and encourage your innovative approach to selling our products. If you're eager to make a significant impact in sales and thrive in a hybrid setting, this role is perfect for you. Join us in our journey to achieve sales excellence.",
     "category": "Hybrid",
     "jobBanner": "https://i.ibb.co/8MfgzTm/hand-drawn-flat-design-sales-representative-illustration-23-2149347412.jpg",
-    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png"
+    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png",
+    "userId": "QoP1aBcE"
   },
   {
     "postedBy": "Benjamin Clark",
     "jobTitle": "Data Entry Clerk",
     "postingDate": "2023-05-12",
     "applicationDeadline": "2023-06-12",
-    "salaryRange": "$18 - $22 per hour",
+    "salaryRange": "18 - 22 per hour",
     "NumberOfApplicants": 22,
     "jobDetails": "Join our team as a Part-Time Data Entry Clerk and take responsibility for maintaining and updating essential data records. Your attention to detail and organizational skills will ensure the accuracy and integrity of our data. This flexible part-time role allows you to contribute to our data management efforts and make a significant impact. We value your commitment to data quality and offer a supportive work environment. If you're meticulous and prefer part-time work, this role is an excellent fit. Join us in maintaining the backbone of our data records.",
     "category": "Part Time",
@@ -232,11 +250,12 @@
     "jobTitle": "Project Coordinator",
     "postingDate": "2023-05-15",
     "applicationDeadline": "2023-06-15",
-    "salaryRange": "$65,000 - $85,000 per year",
+    "salaryRange": "65,000 - 85,000",
     "NumberOfApplicants": 32,
     "jobDetails": "Be a vital part of our onsite team as a Project Coordinator, taking the lead in overseeing project management. Your organizational skills, attention to detail, and leadership abilities will ensure project success. Collaborate with a talented team dedicated to achieving project goals. We offer the opportunity to work onsite and shape project strategies. If you're passionate about driving projects to excellence, this role is an ideal match. Join us in our mission to deliver successful projects.",
     "category": "On Site Job",
     "jobBanner": "https://i.ibb.co/XbMKG1R/business-people-working-giving-tasks-1262-19728.jpg",
-    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png"
+    "companyLogo": "https://i.ibb.co/P1t28kP/pngegg-3.png",
+    "userId": "JH5R7mK9"
   }
 ]

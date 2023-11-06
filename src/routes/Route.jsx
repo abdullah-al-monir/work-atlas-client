@@ -9,6 +9,7 @@ import AddJob from "../pages/Add A Job/AddJob";
 import AppliedJobs from "../pages/Applieid Jobs/AppliedJobs";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import JobDetails from "../components/Job Section/JobDetails";
+import Update from "../components/Update";
 
 const Route = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const Route = createBrowserRouter([
       {
         path: "/job/:id",
         element: <JobDetails />,
+        loader: ({ params }) => fetch(`http://localhost:7000/job/${params.id}`),
+      },
+      {
+        path: "/update/:id",
+        element: <Update />,
         loader: ({ params }) => fetch(`http://localhost:7000/job/${params.id}`),
       },
     ],

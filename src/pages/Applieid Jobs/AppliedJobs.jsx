@@ -47,8 +47,9 @@ const AppliedJobs = () => {
             >
               <option value="">Select</option>
               <option value="Hybrid">Hybrid</option>
+              <option value="On Site Job">On Site</option>
               <option value="Part Time">Part Time</option>
-              <option value="Remote">Remote Job</option>
+              <option value="Remote Job">Remote</option>
               <option value="All Jobs">All Jobs</option>
             </select>
           </label>
@@ -63,7 +64,7 @@ const AppliedJobs = () => {
                       <thead className="bg-gray-50 dark:bg-gray-800">
                         <tr className="flex justify-between items-center px-5 text-center">
                           <th className=" py-3.5  text-left rtl:text-right text-primary">
-                            Job Type
+                            Job Info
                           </th>
 
                           <th className="py-3.5 ml-16  md:ml-5 text-right rtl:text-right text-primary">
@@ -92,7 +93,10 @@ const AppliedJobs = () => {
                                       {job.category}
                                     </p>
                                     <p className="text-xs font-normal text-gray-500 ">
-                                      Salary: {job.salaryRange}
+                                      Salary: ${job.salaryRange}
+                                    </p>
+                                    <p className="text-xs font-normal text-gray-500 ">
+                                      Applicants: {job.NumberOfApplicants}
                                     </p>
                                   </div>
                                 </div>
@@ -100,7 +104,7 @@ const AppliedJobs = () => {
                             </td>
                             <td className="py-4 text-sm font-normal text-gray-700">
                               <img
-                                className="h-5 mr-16 md:mr-32"
+                                className="h-3 md:h-5 mr-16 md:mr-20"
                                 src={job.companyLogo}
                                 alt=""
                               />
@@ -122,7 +126,7 @@ const AppliedJobs = () => {
               </button>
             </div>
           </div>
-        ): <div className="text-center text-lg text-primary my-20 px-5 font-semibold">You haven't apply for any job yet in this category</div>}
+        ): <div className="text-center text-lg text-primary my-20 px-5 font-semibold">You haven't applied for any job yet in this category</div>}
       </section>
     </div>
   );

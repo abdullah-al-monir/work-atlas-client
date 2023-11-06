@@ -29,7 +29,7 @@ const AllJobs = () => {
         <div>
           <h4 className="uppercase text-2xl font-bold">All Jobs</h4>
         </div>
-      <div className="relative flex w-4/6  max-w-[20rem]">
+      <div className="relative flex w-4/6 md:w-8/12  max-w-[20rem]">
       <Input
         type="text"
         label="Serch by Job Title"

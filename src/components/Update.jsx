@@ -1,64 +1,67 @@
-import { useContext, useState } from "react";
-import useDocumentTitle from "../../hooks/useTitle";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
-import useDateFormat from "../../hooks/useDateFormat";
-import { AuthContext } from "../../providers/AuthProvider";
 import { BsCalendar3 } from "react-icons/bs";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-const AddJob = () => {
-  const { user } = useContext(AuthContext);
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [value, onChange] = useState("");
-  const userId = user.uid;
-  const title = "Work Atlas | Add Job";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import useDocumentTitle from "../hooks/useTitle";
+const Update = () => {
+  const title = "Work Atlas | My Jobs";
   useDocumentTitle(title);
+  const job = useLoaderData();
+  const {
+    jobTitle,
+    postedBy,
+    category,
+    postingDate,
+    salaryRange,
+    NumberOfApplicants,
+    jobBanner,
+    companyLogo,
+    jobDetails,
+    applicationDeadline,
+    _id,
+  } = job;
+  const [selectedCategory, setSelectedCategory] = useState(category);
+  const [value, onChange] = useState(applicationDeadline);
   const navigate = useNavigate();
   const handleCategoryChange = (event) => {
     console.log(event.target.value);
     setSelectedCategory(event.target.value);
   };
-  const posted = new Date();
-  const postedDate = useDateFormat(posted);
-  console.log(postedDate);
-  const deadline = new Date(value);
-  const applicantsDeadline = useDateFormat(deadline);
-  console.log(applicantsDeadline);
-  const handleAddJob = (e) => {
+  const handleUpdateJob = (e) => {
     e.preventDefault();
     const form = e.target;
     const jobTitle = form.jobTitle.value;
     const postedBy = form.postedBy.value;
     const category = form.category.value;
+    const postingDate = form.postingDate.value;
     const applicationDeadline = form.applicationDeadline.value;
     const salaryRange = form.salaryRange.value;
     const NumberOfApplicants = parseInt(form.NumberOfApplicants.value);
     const jobDetails = form.jobDetails.value;
     const jobBanner = form.jobBanner.value;
     const companyLogo = form.companyLogo.value;
-    const job = {
+    const updatedJob = {
       jobTitle,
       postedBy,
       category,
-      postingDate: postedDate,
+      postingDate,
       salaryRange,
       NumberOfApplicants,
       jobBanner,
       companyLogo,
       jobDetails,
       applicationDeadline,
-      userId,
     };
-    console.log(job);
     axios
-      .post("http://localhost:7000/allJobs", job)
+      .put(`http://localhost:7000/job/${_id}`, updatedJob)
       .then(() => {
-        navigate("/allJobs");
-        Swal.fire("Great!", "You have posted the job successfully", "success");
+        navigate("/myJobs");
+        Swal.fire("Great!", "You have update the job successfully", "success");
       })
       .catch((error) => {
         console.log(error);
@@ -71,7 +74,7 @@ const AddJob = () => {
           Fill the form to post a job
         </h2>
 
-        <form onSubmit={handleAddJob}>
+        <form onSubmit={handleUpdateJob}>
           <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
               <label className="text-gray-700">Job Title</label>
@@ -80,14 +83,14 @@ const AddJob = () => {
                 name="jobTitle"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Enter the job title"
-                required
+                defaultValue={jobTitle}
               />
             </div>
             <div>
               <label className="text-gray-700">Posted by</label>
               <input
                 type="text"
-                defaultValue={user.displayName}
+                defaultValue={postedBy}
                 name="postedBy"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 disabled
@@ -100,6 +103,7 @@ const AddJob = () => {
                 name="category"
                 value={selectedCategory}
                 onChange={handleCategoryChange}
+                defaultValue={category}
                 required
               >
                 <option value="">Select</option>
@@ -118,6 +122,7 @@ const AddJob = () => {
                 name="salaryRange"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Enter the salary range"
+                defaultValue={salaryRange}
                 required
               />
             </div>
@@ -129,6 +134,7 @@ const AddJob = () => {
                 name="jobDetails"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Write the job description"
+                defaultValue={jobDetails}
               />
             </div>
 
@@ -143,9 +149,8 @@ const AddJob = () => {
                 yearPlaceholder="yyyy"
                 monthPlaceholder="mm"
                 dayPlaceholder="dd"
-                minDate={new Date()}
                 format="y-MM-dd"
-                value={new Date()}
+                value={postingDate}
                 clearIcon
                 disabled
               />
@@ -176,8 +181,8 @@ const AddJob = () => {
               <input
                 type="text"
                 name="NumberOfApplicants"
-                defaultValue={0}
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                defaultValue={NumberOfApplicants}
                 disabled
               />
             </div>
@@ -188,6 +193,7 @@ const AddJob = () => {
                 name="jobBanner"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Job banner image link"
+                defaultValue={jobBanner}
               />
             </div>
             <div>
@@ -197,15 +203,21 @@ const AddJob = () => {
                 name="companyLogo"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Company logo image link"
+                defaultValue={companyLogo}
               />
             </div>
           </div>
 
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-end gap-5 mt-6">
+            <Link to="/myJobs">
+              <button className="px-8 py-2.5 leading-5 text-primary hover:text-white transition-colors border border-primary duration-300 font-semibold transform bg-white rounded-md hover:bg-secondary focus:outline-none focus:bg-secondary">
+                Cancel
+              </button>
+            </Link>
             <input
               type="submit"
-              value="Add"
-              className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 font-semibold transform bg-primary rounded-md hover:bg-secondary focus:outline-none focus:bg-secondary"
+              value="Update"
+              className="px-8 py-2.5 leading-5 text-white  transition-colors duration-300 font-semibold transform bg-primary rounded-md hover:bg-secondary focus:outline-none focus:bg-secondary"
             />
           </div>
         </form>
@@ -214,4 +226,4 @@ const AddJob = () => {
   );
 };
 
-export default AddJob;
+export default Update;
