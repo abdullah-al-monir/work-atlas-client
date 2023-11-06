@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 export function TabsDefault() {
   const { setLoading } = useContext(AuthContext);
   const categories = useCategories();
-  const [category, setCategory] = useState("On Site Job");
+  const [category, setCategory] = useState("Part Time");
   const activeCategory = category;
   const [jobs, setJobs] = useState([]);
   useEffect(() => {

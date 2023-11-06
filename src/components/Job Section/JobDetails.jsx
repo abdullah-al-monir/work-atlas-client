@@ -29,7 +29,7 @@ const JobDetails = () => {
     if (postedBy === user.displayName) {
       return Swal.fire(
         "Oops!",
-        "Sorry! You can't apply for your own job on your own post.",
+        "Sorry! You can't apply for your own job post.",
         "error"
       );
     }
@@ -108,25 +108,25 @@ const JobDetails = () => {
           </div>
 
           <div className="mt-4">
-            <div className="flex items-center">
+            <div className="flex md:items-center flex-col md:flex-row gap-2">
               <div className="flex items-center">
                 <FaRegUserCircle />
                 <a
                   href="#"
-                  className="mx-2 font-semibold text-gray-700 dark:text-gray-200"
+                  className="mx-2 font-semibold text-gray-700"
                   tabIndex="0"
                   role="link"
                 >
                   {postedBy}
                 </a>
               </div>
-              <p className="mx-1 text-xs text-gray-600 dark:text-gray-300">
+              <p className="mx-1 text-xs text-black ">
                 Posted in:{" "}
                 <span className="text-green-500 font-semibold text-sm">
                   {postingDate}
                 </span>
               </p>
-              <p className="mx-1 text-xs text-gray-600 dark:text-gray-300">
+              <p className="mx-1 text-xs text-black ">
                 Application Deadline:{" "}
                 <span className="text-red-500 font-semibold text-sm">
                   {applicationDeadline}
