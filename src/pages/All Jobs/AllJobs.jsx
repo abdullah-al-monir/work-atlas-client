@@ -21,6 +21,7 @@ const AllJobs = () => {
   };
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
+      setLoading(false);
       handleSearch();
     }
   };

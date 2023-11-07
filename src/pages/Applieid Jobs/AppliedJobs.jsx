@@ -36,11 +36,14 @@ const AppliedJobs = () => {
             Jobs Applied by {user.displayName}
           </h2>
         </div>
-        <div className="mt-5 text-right">
-          <label className="">
+        <div className="mt-5 text-right  w-full flex justify-end">
+         <div className="">
+         <label className=" text-sm mb-1 block  font-medium text-gray-700">
             Filter by job Category
+          </label>
+          <div className="min-w-[200px]">
             <select
-              className="ml-2 px-2 py-1 rounded-lg"
+              className="block w-full rounded-md px-2 py-1 border-primary shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 disabled:cursor-not-allowed disabled:bg-secondary"
               name="selectedCategory"
               value={selectedCategory}
               onChange={handleCategoryChange}
@@ -52,7 +55,8 @@ const AppliedJobs = () => {
               <option value="Remote Job">Remote</option>
               <option value="All Jobs">All Jobs</option>
             </select>
-          </label>
+          </div>
+         </div>
         </div>
         {appliedJobs.length > 0 ? (
           <div>
@@ -126,7 +130,11 @@ const AppliedJobs = () => {
               </button>
             </div>
           </div>
-        ): <div className="text-center text-lg text-primary my-20 px-5 font-semibold">You haven't applied for any job yet in this category</div>}
+        ) : (
+          <div className="text-center text-lg text-primary my-20 px-5 font-semibold">
+            You haven't applied for any job yet in this category
+          </div>
+        )}
       </section>
     </div>
   );

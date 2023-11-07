@@ -1,4 +1,7 @@
+import Banner from "../../components/Banner";
+import Hiring from "../../components/Hiring/Hiring";
 import JobSection from "../../components/Job Section/JobSection";
+import ServiceJobs from "../../components/ServiceJobs/ServiceJobs";
 import useDocumentTitle from "../../hooks/useTitle";
 
 const Home = () => {
@@ -6,8 +9,10 @@ const Home = () => {
   useDocumentTitle(home);
   return (
     <div>
-      <h2>This is home</h2>
+      <Banner />
       <JobSection />
+      <Hiring />
+      <ServiceJobs />
     </div>
   );
 };

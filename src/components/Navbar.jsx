@@ -5,11 +5,11 @@ import logo from "/workatlas.png";
 import Swal from "sweetalert2";
 
 function Navbar() {
-  const { user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const navigate = useNavigate();
-  
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -63,6 +63,20 @@ function Navbar() {
           All Jobs
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/blogs"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
+              : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
+          }
+        >
+          Blogs
+        </NavLink>
+      </li>
       {user ? (
         <>
           {" "}
@@ -91,7 +105,7 @@ function Navbar() {
                   : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
               }
             >
-              Add A Job
+              Add Job
             </NavLink>
           </li>
           <li>
@@ -138,7 +152,11 @@ function Navbar() {
     </>
   );
   return (
-    <nav className={` bg-white shadow z-50  ${isSticky ? "sticky top-0" : ""}`}>
+    <nav
+      className={` bg-white shadow shadow-secondary z-50 border-b-2 border-b-primary  ${
+        isSticky ? "sticky top-0" : ""
+      }`}
+    >
       <div className="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
