@@ -90,20 +90,19 @@ const JobDetails = () => {
               <p>by</p>
               <img className="h-6" src={companyLogo} alt="" />
             </div>
-            <a
-              href="#"
-              className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline"
-              tabIndex="0"
-              role="link"
-            >
+            <p className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600">
               {jobTitle}
-            </a>
+            </p>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               {jobDetails}
             </p>
             <p className="mt-2 text-sm  dark:text-gray-400">
               Salary Range: ${salaryRange}{" "}
-              {category !== "Part Time" && <span>per year</span>}
+              {category !== "Part Time" ? (
+                <span>per year</span>
+              ) : (
+                <span>per hour</span>
+              )}
             </p>
             <p className="mt-2 text-sm  dark:text-gray-400">
               Number of Applicants: {NumberOfApplicants}
@@ -125,13 +124,13 @@ const JobDetails = () => {
               </div>
               <p className="mx-1 text-xs text-black ">
                 Posted in:{" "}
-                <span className="text-green-500 font-semibold text-sm">
+                <span className="text-primary font-semibold text-sm">
                   {postingDate}
                 </span>
               </p>
               <p className="mx-1 text-xs text-black ">
                 Application Deadline:{" "}
-                <span className="text-red-500 font-semibold text-sm">
+                <span className={`${deadline < presentDate ? "text-red-500 " : "text-[#50C878]"} font-semibold text-sm`}>
                   {applicationDeadline}
                 </span>
               </p>
