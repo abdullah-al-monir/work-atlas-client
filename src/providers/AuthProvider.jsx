@@ -9,7 +9,6 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { Spinner } from "@material-tailwind/react";
 import axios from "axios";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -62,13 +61,6 @@ const AuthProvider = ({ children }) => {
       return unsubscribe();
     };
   }, [user?.email]);
-  if (loading) {
-    return (
-      <div className="w-screen mx-auto">
-        <Spinner className="h-10 w-10 text-center text-primary" />
-      </div>
-    );
-  }
   const authInfo = {
     user,
     setUser,
@@ -76,6 +68,7 @@ const AuthProvider = ({ children }) => {
     signIn,
     googleSignIn,
     logOut,
+    loading,
     setLoading,
   };
   return (

@@ -1,10 +1,10 @@
-import { Tabs, TabsHeader, Tab } from "@material-tailwind/react";
+import { Tabs, TabsHeader, Tab, Spinner } from "@material-tailwind/react";
 import { useContext, useEffect, useState } from "react";
 import useCategories from "../../hooks/useCategories";
 import JobCard from "./JobCard";
 import { AuthContext } from "../../providers/AuthProvider";
 export function TabsDefault() {
-  const { setLoading } = useContext(AuthContext);
+  const { setLoading, loading } = useContext(AuthContext);
   const categories = useCategories();
   const [category, setCategory] = useState("Part Time");
   const activeCategory = category;
@@ -17,10 +17,17 @@ export function TabsDefault() {
         setLoading(false);
       });
   }, [category, setLoading]);
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[100vh]">
+        <Spinner className="h-10 w-10 text-center text-primary" />
+      </div>
+    );
+  }
   return (
     <Tabs value="html">
       <TabsHeader>
-        {categories.map((category, idx) => (
+        {categories && categories.map((category, idx) => (
           <Tab
             key={idx}
             value={category.category}

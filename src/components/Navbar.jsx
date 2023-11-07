@@ -1,14 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import logo from "/workatlas.png";
 import Swal from "sweetalert2";
 
 function Navbar() {
-  const { user, logOut } = useContext(AuthContext);
-  ;
+  const { user, logOut} = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const navigate = useNavigate();
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -17,6 +18,21 @@ function Navbar() {
     navigate("/");
     Swal.fire("Success!", "User logged out successfully", "success");
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navLinks = (
     <>
       <li>
@@ -122,7 +138,7 @@ function Navbar() {
     </>
   );
   return (
-    <nav className="relative bg-white shadow">
+    <nav className={` bg-white shadow z-50  ${isSticky ? "sticky top-0" : ""}`}>
       <div className="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
