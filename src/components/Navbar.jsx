@@ -76,51 +76,50 @@ function Navbar() {
           Blogs
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/appliedJobs"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
+              : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
+          }
+        >
+          Applied Jobs
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/addJob"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
+              : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
+          }
+        >
+          Add Job
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/myJobs"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
+              : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
+          }
+        >
+          My Jobs
+        </NavLink>
+      </li>
       {user ? (
         <>
-          {" "}
-          <li>
-            <NavLink
-              to="/appliedJobs"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
-                  : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
-              }
-            >
-              Applied Jobs
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/addJob"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
-                  : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
-              }
-            >
-              Add Job
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/myJobs"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending"
-                  : isActive
-                  ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
-                  : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
-              }
-            >
-              My Jobs
-            </NavLink>
-          </li>
           <li>
             <button
               onClick={handleLogOut}

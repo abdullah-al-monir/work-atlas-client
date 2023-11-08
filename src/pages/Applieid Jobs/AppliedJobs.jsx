@@ -31,8 +31,8 @@ const getTargetElement = () => document.getElementById("table");
 const AppliedJobs = () => {
   const title = "Work Atlas | Applied Jobs";
   useDocumentTitle(title);
-  const { user, setLoading } = useContext(AuthContext);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const { user } = useContext(AuthContext);
+  const [selectedCategory, setSelectedCategory] = useState("All Jobs");
   const userEmail = user?.email;
   const [appliedJobs, setAppliedJobs] = useState([]);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -46,10 +46,9 @@ const AppliedJobs = () => {
       )
       .then((res) => {
         setAppliedJobs(res.data);
-        setLoading(false);
         window.scrollTo(0, 0);
       });
-  }, [userEmail, setLoading, selectedCategory]);
+  }, [userEmail, selectedCategory]);
   const handleCategoryChange = (event) => {
     console.log(event.target.value);
     setSelectedCategory(event.target.value);
@@ -75,7 +74,7 @@ const AppliedJobs = () => {
                 value={selectedCategory}
                 onChange={handleCategoryChange}
               >
-                <option value="">Select</option>
+                <option value="All Jobs">Select</option>
                 <option value="Hybrid">Hybrid</option>
                 <option value="On Site Job">On Site</option>
                 <option value="Part Time">Part Time</option>

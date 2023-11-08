@@ -6,7 +6,7 @@ const Blogs = () => {
   }, []);
   return (
     <div>
-      <div className="mx-auto max-w-lg mt-20">
+      <div className="mx-auto max-w-lg my-20">
         <div className="space-y-6">
           <details className="group rounded-xl bg-white shadow-[0_10px_100px_10px_rgba(0,0,0,0.05)]">
             <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-secondary-900">
@@ -109,7 +109,13 @@ const Blogs = () => {
               </div>
             </summary>
             <div className="px-6 pb-6 text-secondary-500">
-              We're looking for a customer success manager to join our team.
+              In this website I used React as framework and Tailwind for CSS. I
+              used MongoDB for the api database.I used firebase for
+              authentication and also deployed my website in the firebase. I
+              used some react libraries like react-router, react-helmet,
+              react-to-pdf, emailjs, react-tsparticles, material-tailwind,
+              sweetAlert2, react-icons, react-date-picker etc. I also used axios
+              to get the data from api.
             </div>
           </details>
         </div>
