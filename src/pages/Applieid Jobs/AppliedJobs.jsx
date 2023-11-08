@@ -32,7 +32,7 @@ const AppliedJobs = () => {
   const title = "Work Atlas | Applied Jobs";
   useDocumentTitle(title);
   const { user, setLoading } = useContext(AuthContext);
-  const [selectedCategory, setSelectedCategory] = useState("All Jobs");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const userEmail = user?.email;
   const [appliedJobs, setAppliedJobs] = useState([]);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -75,7 +75,7 @@ const AppliedJobs = () => {
                 value={selectedCategory}
                 onChange={handleCategoryChange}
               >
-                <option value="All Jobs">Select</option>
+                <option value="">Select</option>
                 <option value="Hybrid">Hybrid</option>
                 <option value="On Site Job">On Site</option>
                 <option value="Part Time">Part Time</option>
@@ -85,7 +85,7 @@ const AppliedJobs = () => {
             </div>
           </div>
         </div>
-        {appliedJobs && appliedJobs?.length > 0 ? (
+        {appliedJobs?.length > 0 ? (
           <div>
             <div id="table" className="flex flex-col mt-6">
               <div className="">
@@ -119,7 +119,7 @@ const AppliedJobs = () => {
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
-                        {appliedJobs && appliedJobs?.map((job) => (
+                        {appliedJobs?.map((job) => (
                           <tr key={job._id} className=" px-5">
                             <td className="p-4 text-sm font-medium ">
                               <div className="inline-flex items-center gap-x-3">
