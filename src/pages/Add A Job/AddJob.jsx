@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import useDocumentTitle from "../../hooks/useTitle";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
@@ -18,6 +18,9 @@ const AddJob = () => {
   const title = "Work Atlas | Add Job";
   useDocumentTitle(title);
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleCategoryChange = (event) => {
     console.log(event.target.value);
     setSelectedCategory(event.target.value);

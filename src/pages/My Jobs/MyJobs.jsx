@@ -16,7 +16,10 @@ const MyJobs = () => {
       .get(`http://localhost:7000/myJobs?userId=${userId}`, {
         withCredentials: true,
       })
-      .then((res) => setJobs(res.data));
+      .then((res) => {
+        setJobs(res.data);
+        window.scrollTo(0, 0);
+      });
   }, [userId]);
   const handleDeleteJob = (id) => {
     axios.delete(`http://localhost:7000/allJobs/${id}`).then((res) => {
@@ -38,7 +41,7 @@ const MyJobs = () => {
         {jobs.length > 0 ? (
           <section className="container px-4 mx-auto mt-10">
             <div className="flex items-center gap-x-3">
-              <h2 className="text-lg font-medium text-gray-800">
+              <h2 className="text-xl font-medium text-secondary">
                 Jobs posted by {user.displayName}
               </h2>
 
@@ -59,7 +62,7 @@ const MyJobs = () => {
                             className="py-3.5 px-4 text-secondary "
                           >
                             <div className="flex items-center gap-x-3">
-                              <span>Name</span>
+                              <span>Job</span>
                             </div>
                           </th>
 

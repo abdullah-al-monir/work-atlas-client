@@ -5,6 +5,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { BsInfoCircle } from "react-icons/bs";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
+
 const JobDetails = () => {
   const { user } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -60,16 +62,47 @@ const JobDetails = () => {
       companyLogo,
       resume,
       NumberOfApplicants: NumberOfApplicants + 1,
+      jobBanner,
+      postedBy,
     };
+
     axios
       .post("http://localhost:7000/appliedJobs", appliedJob)
       .then(() => {
         navigate("/appliedJobs");
-        Swal.fire("Great!", "Applied the job successfully", "success");
+        Swal.fire({
+          title: "Great!",
+          html: '<div><p>You have applied for the job successfully. </p></br> <p class="text-green-500 font-semibold">Please check your mail!</p></div>',
+          icon: "success",
+        });
       })
       .catch((err) => console.log(err));
-    // to increase the applican
+    // to increase the applicant number
     axios.patch(`http://localhost:7000/applied/${_id}`, job);
+    // send Email
+    const emailInfo = {
+      email: user.email,
+      name: user.displayName,
+      position: jobTitle,
+      ceo: postedBy,
+      resume,
+    };
+    emailjs
+      .send(
+        "service_fqemrm5",
+        "template_v05krij",
+        emailInfo,
+        "Lkjv3B1wxqFYBLmCB"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Email send successfully");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <div className="my-20 mx-5">
@@ -130,7 +163,11 @@ const JobDetails = () => {
               </p>
               <p className="mx-1 text-xs text-black ">
                 Application Deadline:{" "}
-                <span className={`${deadline < presentDate ? "text-red-500 " : "text-[#50C878]"} font-semibold text-sm`}>
+                <span
+                  className={`${
+                    deadline < presentDate ? "text-red-500 " : "text-[#50C878]"
+                  } font-semibold text-sm`}
+                >
                   {applicationDeadline}
                 </span>
               </p>

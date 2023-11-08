@@ -9,7 +9,6 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const navigate = useNavigate();
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -162,7 +161,7 @@ function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img className="w-auto h-6 sm:h-7" src={logo} alt="" />
             <h2
-              className="font-bold text-lg uppercase"
+              className="font-extrabold text-lg uppercase"
               style={{
                 background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
                 WebkitBackgroundClip: "text",

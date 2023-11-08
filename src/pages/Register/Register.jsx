@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -12,6 +12,9 @@ const Register = () => {
   const [error, setError] = useState("");
   const title = "Work Atlas | Register";
   useDocumentTitle(title);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const handleSignUp = (e) => {
     e.preventDefault();

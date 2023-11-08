@@ -20,13 +20,13 @@ export function TabsDefault() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[100vh]">
-        <Spinner className="h-10 w-10 text-center text-primary" />
+        <Spinner className="h-10 w-10 text-center text-secondary" />
       </div>
     );
   }
   return (
     <Tabs value="html">
-      <TabsHeader>
+      <TabsHeader className="bg-black/50 border">
         {categories && categories.map((category, idx) => (
           <Tab
             key={idx}
@@ -34,8 +34,8 @@ export function TabsDefault() {
             onClick={() => setCategory(category.category)}
             className={
               category.category === activeCategory
-                ? "bg-white text-secondary md:text-lg font-semibold"
-                : "text-primary md:text-lg font-semibold hover:text-secondary"
+                ? "bg-white text-primary md:text-lg font-semibold"
+                : "text-secondary md:text-lg font-semibold hover:text-primary border"
             }
           >
             {category.category}

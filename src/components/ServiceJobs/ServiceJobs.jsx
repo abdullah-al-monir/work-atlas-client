@@ -18,9 +18,9 @@ const ServiceJobs = () => {
           }`}
         >
           <img className="w-full md:w-1/2 md:mt-0 mt-10" src={job.img} alt="" />
-          <div className="space-y-5 md:px-12 max-w-lg mt-5 md:mt-0">
-            <h1 className="text-3xl md:text-5xl font-bold garamond">{job.title}</h1>
-            <p className="text-lg">{job.shortDetails}</p>
+          <div className="space-y-5 md:px-12 max-w-lg mt-5 md:mt-0 ">
+            <h1 className="text-3xl md:text-5xl font-bold garamond text-secondary">{job.title}</h1>
+            <p className="text-lg text-white">{job.shortDetails}</p>
             <button className="text-xl font-semibold text-white px-4 py-2 bg-primary hover:bg-secondary duration-300 transform rounded-lg">
               {job.button}
             </button>

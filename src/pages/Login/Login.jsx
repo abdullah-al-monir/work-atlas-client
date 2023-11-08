@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -14,6 +14,9 @@ const Login = () => {
   useDocumentTitle(title);
   const navigate = useNavigate();
   const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;

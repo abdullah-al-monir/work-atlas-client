@@ -30,6 +30,7 @@ const AllJobs = () => {
     axios.get(`http://localhost:7000/allJobs`).then((res) => {
       setJobs(res.data);
       setLoading(false);
+      window.scrollTo(0, 0);
     });
   }, [setLoading]);
   if (loading) {
@@ -40,10 +41,10 @@ const AllJobs = () => {
     );
   }
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="my-10 w-full px-5 flex justify-between  items-center gap-5 flex-wrap-reverse">
+    <div className="max-w-7xl mx-auto mb-10">
+      <div className="mt-10 w-full px-5 flex justify-between  items-center gap-5 flex-wrap-reverse bg-white py-2 pt-10">
         <div>
-          <h4 className="text-2xl font-bold">All Jobs</h4>
+          <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary uppercase">All Jobs</h4>
         </div>
         <div className="relative flex w-4/6 md:w-8/12  max-w-[20rem]">
           <Input
@@ -60,8 +61,8 @@ const AllJobs = () => {
           <Button
             size="sm"
             onClick={handleSearch}
-            className={`!absolute right-1 top-1 rounded ${
-              search === "" ? "bg-primary" : "bg-secondary"
+            className={`!absolute right-1 top-1 rounded   ${
+              search === "" ? "bg-secondary hover:bg-primary" : "bg-primary hover:bg-secondary"
             }`}
           >
             Search
@@ -70,11 +71,11 @@ const AllJobs = () => {
       </div>
       <div>
         {noDataFound ? (
-          <div className="text-center text-xl my-10">Sorry! No Job found.</div>
+          <div className="text-center text-xl my-10 text-secondary">Sorry! No Job found.</div>
         ) : (
           <div>
-            <div className="container p-2 mx-auto">
-              <h2 className="mb-4 text-2xl font-semibold">
+            <div className="container  mx-auto">
+              <h2 className="p-2 text-2xl font-semibold bg-white">
                 Jobs found: {jobs.length}
               </h2>
               <div className="overflow-x-auto">
@@ -87,7 +88,7 @@ const AllJobs = () => {
                     <col />
                     <col className="w-24" />
                   </colgroup>
-                  <thead className="bg-black text-secondary">
+                  <thead className="bg-black text-secondary border">
                     <tr className="text-left">
                       <th className="p-3 md:text-lg">Role</th>
                       <th className="p-3 md:text-lg">Posted by</th>
@@ -133,7 +134,7 @@ function TableRow({
   id,
 }) {
   return (
-    <tr className="border-b border-opacity-20 bg-secondary/30">
+    <tr className="border-b border-opacity-20 bg-secondary/30 text-white border-x">
       <td className="p-3">
         <p className="md:text-base">{role}</p>
         <p>{category}</p>
