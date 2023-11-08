@@ -23,7 +23,7 @@ Here My website name is Work Atlas. Here you can search for jobs and also post f
 ## Add Job (Private route)
   In this page user can post a job by filling the form which is given here.
 
-## My Jobs 
+## My Jobs (Private Route)
   In this page the user can see the only jobs which are added by him/her. The job are visible in a table where each row represents each job. In each row user can edit or delete the job by clicking icons. If she/he clicked the delete button then the job is deleted from the database and removed from the table. If he/she clicked edit button then the user redirected to the update page. In the update page user can update some job info excluding posted date, his/her name.
 
 ## Login
