@@ -13,11 +13,13 @@ const AllJobs = () => {
   const title = "Work Atlas | All Jobs";
   useDocumentTitle(title);
   const handleSearch = () => {
-    axios.get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`).then((res) => {
-      setJobs(res.data);
-      setLoading(false);
-      setNoDataFound(res.data.length === 0);
-    });
+    axios
+      .get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`)
+      .then((res) => {
+        setJobs(res.data);
+        setLoading(false);
+        setNoDataFound(res.data.length === 0);
+      });
   };
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -33,18 +35,13 @@ const AllJobs = () => {
       window.scrollTo(0, 0);
     });
   }, [setLoading]);
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-[100vh]">
-        <Spinner className="h-10 w-10 text-center text-primary" />
-      </div>
-    );
-  }
   return (
     <div className="max-w-7xl mx-auto mb-10">
       <div className="mt-10 w-full px-5 flex justify-between  items-center gap-5 flex-wrap-reverse bg-white py-2 pt-10">
         <div>
-          <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary uppercase">All Jobs</h4>
+          <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary uppercase">
+            All Jobs
+          </h4>
         </div>
         <div className="relative flex w-4/6 md:w-8/12  max-w-[20rem]">
           <Input
@@ -62,7 +59,9 @@ const AllJobs = () => {
             size="sm"
             onClick={handleSearch}
             className={`!absolute right-1 top-1 rounded   ${
-              search === "" ? "bg-secondary hover:bg-primary" : "bg-primary hover:bg-secondary"
+              search === ""
+                ? "bg-secondary hover:bg-primary"
+                : "bg-primary hover:bg-secondary"
             }`}
           >
             Search
@@ -71,7 +70,9 @@ const AllJobs = () => {
       </div>
       <div>
         {noDataFound ? (
-          <div className="text-center text-xl my-10 text-secondary">Sorry! No Job found.</div>
+          <div className="text-center text-xl my-10 text-secondary">
+            Sorry! No Job found.
+          </div>
         ) : (
           <div>
             <div className="container  mx-auto">

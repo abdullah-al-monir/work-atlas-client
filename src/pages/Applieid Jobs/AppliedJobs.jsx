@@ -31,7 +31,7 @@ const getTargetElement = () => document.getElementById("table");
 const AppliedJobs = () => {
   const title = "Work Atlas | Applied Jobs";
   useDocumentTitle(title);
-  const { user } = useContext(AuthContext);
+  const { user, setLoading } = useContext(AuthContext);
   const [selectedCategory, setSelectedCategory] = useState("All Jobs");
   const userEmail = user?.email;
   const [appliedJobs, setAppliedJobs] = useState([]);
@@ -46,9 +46,10 @@ const AppliedJobs = () => {
       )
       .then((res) => {
         setAppliedJobs(res.data);
+        setLoading(false);
         window.scrollTo(0, 0);
       });
-  }, [userEmail, selectedCategory]);
+  }, [userEmail, selectedCategory, setLoading]);
   const handleCategoryChange = (event) => {
     console.log(event.target.value);
     setSelectedCategory(event.target.value);
@@ -84,7 +85,7 @@ const AppliedJobs = () => {
             </div>
           </div>
         </div>
-        {appliedJobs.length > 0 ? (
+        {appliedJobs && appliedJobs?.length > 0 ? (
           <div>
             <div id="table" className="flex flex-col mt-6">
               <div className="">
@@ -118,7 +119,7 @@ const AppliedJobs = () => {
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
-                        {appliedJobs.map((job) => (
+                        {appliedJobs && appliedJobs?.map((job) => (
                           <tr key={job._id} className=" px-5">
                             <td className="p-4 text-sm font-medium ">
                               <div className="inline-flex items-center gap-x-3">
