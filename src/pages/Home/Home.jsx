@@ -5,6 +5,7 @@ import JobSection from "../../components/Job Section/JobSection";
 import ServiceJobs from "../../components/ServiceJobs/ServiceJobs";
 import useDocumentTitle from "../../hooks/useTitle";
 import Contact from "../../components/Contact";
+import Clients from "../../components/Clients/Clients";
 const Home = () => {
   const home = "Work Atlas | Home";
   useDocumentTitle(home);
@@ -16,6 +17,7 @@ const Home = () => {
       <Banner />
       <JobSection />
       <Hiring />
+      <Clients />
       <ServiceJobs />
       <Contact />
     </div>

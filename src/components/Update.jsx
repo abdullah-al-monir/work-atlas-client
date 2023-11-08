@@ -58,7 +58,7 @@ const Update = () => {
       applicationDeadline,
     };
     axios
-      .put(`http://localhost:7000/job/${_id}`, updatedJob)
+      .put(`https://work-atlas-server.vercel.app/job/${_id}`, updatedJob)
       .then(() => {
         navigate("/myJobs");
         Swal.fire("Great!", "You have update the job successfully", "success");

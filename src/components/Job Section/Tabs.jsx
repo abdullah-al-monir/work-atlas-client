@@ -6,11 +6,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 export function TabsDefault() {
   const { setLoading, loading } = useContext(AuthContext);
   const categories = useCategories();
-  const [category, setCategory] = useState("Part Time");
+  const [category, setCategory] = useState("On Site Job");
   const activeCategory = category;
   const [jobs, setJobs] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:7000/jobsByCategory?category=${category}`)
+    fetch(`https://work-atlas-server.vercel.app/jobsByCategory?category=${category}`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);

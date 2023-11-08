@@ -13,7 +13,7 @@ const AllJobs = () => {
   const title = "Work Atlas | All Jobs";
   useDocumentTitle(title);
   const handleSearch = () => {
-    axios.get(`http://localhost:7000/allJobs?search=${search}`).then((res) => {
+    axios.get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`).then((res) => {
       setJobs(res.data);
       setLoading(false);
       setNoDataFound(res.data.length === 0);
@@ -27,7 +27,7 @@ const AllJobs = () => {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/allJobs`).then((res) => {
+    axios.get(`https://work-atlas-server.vercel.app/allJobs`).then((res) => {
       setJobs(res.data);
       setLoading(false);
       window.scrollTo(0, 0);

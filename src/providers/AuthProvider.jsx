@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       if (currentUser) {
         axios
-          .post("http://localhost:7000/jwt", loggedUser, {
+          .post("https://work-atlas-server.vercel.app/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("http://localhost:7000/logout", loggedUser, {
+          .post("https://work-atlas-server.vercel.app/logout", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {

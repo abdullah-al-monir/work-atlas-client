@@ -132,7 +132,7 @@ function Navbar() {
         </>
       ) : (
         <li>
-          <button className="font-semibold text-white lg:hidden py-1 pl-3 mx-6">
+          <button className="font-semibold text-white lg:hidden py-1 pl-3 mx-2">
             <NavLink
               to="/login"
               className={({ isActive, isPending }) =>

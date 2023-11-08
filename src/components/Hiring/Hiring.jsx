@@ -5,7 +5,7 @@ const Hiring = () => {
   const [hiring, setHiring] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:7000/hiring")
+      .get("https://work-atlas-server.vercel.app/hiring")
       .then((res) => setHiring(res.data));
   }, []);
   return (

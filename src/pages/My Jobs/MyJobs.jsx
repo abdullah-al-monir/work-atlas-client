@@ -13,7 +13,7 @@ const MyJobs = () => {
   useDocumentTitle(title);
   useEffect(() => {
     axios
-      .get(`http://localhost:7000/myJobs?userId=${userId}`, {
+      .get(`https://work-atlas-server.vercel.app/myJobs?userId=${userId}`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -22,7 +22,7 @@ const MyJobs = () => {
       });
   }, [userId]);
   const handleDeleteJob = (id) => {
-    axios.delete(`http://localhost:7000/allJobs/${id}`).then((res) => {
+    axios.delete(`https://work-atlas-server.vercel.app/allJobs/${id}`).then((res) => {
       console.log(res.data);
       if (res.data.deletedCount > 0) {
         Swal.fire(

@@ -58,7 +58,7 @@ const AddJob = () => {
     };
     console.log(job);
     axios
-      .post("http://localhost:7000/allJobs", job)
+      .post("https://work-atlas-server.vercel.app/allJobs", job)
       .then(() => {
         navigate("/allJobs");
         Swal.fire("Great!", "You have posted the job successfully", "success");

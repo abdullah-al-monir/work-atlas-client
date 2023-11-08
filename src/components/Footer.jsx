@@ -18,7 +18,7 @@ const Footer = () => {
           </h2>
         </Link>
 
-        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+        <p className="mx-auto mt-6 max-w-xl text-center leading-relaxed ">
           Connecting job seekers with dream opportunities and empowering
           employers to find top talent. Making job searching effortless and
           efficient at Work Atlas.
@@ -27,7 +27,7 @@ const Footer = () => {
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               About
@@ -36,7 +36,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               Careers
@@ -45,7 +45,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               History
@@ -54,7 +54,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               Services
@@ -63,7 +63,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               Projects
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
               href="/"
             >
               Blog
@@ -86,7 +86,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
             >
               <span className="sr-only">Facebook</span>
               <svg
@@ -109,7 +109,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -132,7 +132,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
             >
               <span className="sr-only">Twitter</span>
               <svg
@@ -151,7 +151,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -174,7 +174,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:text-gray-700/75"
+              className="text-primary transition hover:text-primary/75"
             >
               <span className="sr-only">Dribbble</span>
               <svg

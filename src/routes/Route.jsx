@@ -70,7 +70,7 @@ const Route = createBrowserRouter([
             <JobDetails />
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:7000/job/${params.id}`),
+        loader: ({ params }) => fetch(`https://work-atlas-server.vercel.app/job/${params.id}`),
       },
       {
         path: "/update/:id",
@@ -79,7 +79,7 @@ const Route = createBrowserRouter([
             <Update />
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:7000/job/${params.id}`),
+        loader: ({ params }) => fetch(`https://work-atlas-server.vercel.app/job/${params.id}`),
       },
     ],
   },

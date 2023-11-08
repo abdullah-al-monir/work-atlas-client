@@ -39,7 +39,7 @@ const AppliedJobs = () => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:7000/appliedJobs?email=${userEmail}&category=${selectedCategory}`,
+        `https://work-atlas-server.vercel.app/appliedJobs?email=${userEmail}&category=${selectedCategory}`,
         {
           withCredentials: true,
         }

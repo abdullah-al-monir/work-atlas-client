@@ -67,7 +67,7 @@ const JobDetails = () => {
     };
 
     axios
-      .post("http://localhost:7000/appliedJobs", appliedJob)
+      .post("https://work-atlas-server.vercel.app/appliedJobs", appliedJob)
       .then(() => {
         navigate("/appliedJobs");
         Swal.fire({
@@ -78,7 +78,7 @@ const JobDetails = () => {
       })
       .catch((err) => console.log(err));
     // to increase the applicant number
-    axios.patch(`http://localhost:7000/applied/${_id}`, job);
+    axios.patch(`https://work-atlas-server.vercel.app/applied/${_id}`, job);
     // send Email
     const emailInfo = {
       email: user.email,
