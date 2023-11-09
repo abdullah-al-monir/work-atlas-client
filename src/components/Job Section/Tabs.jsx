@@ -26,7 +26,7 @@ export function TabsDefault() {
   }
   return (
     <Tabs value="html">
-      <TabsHeader className="bg-black/50 border">
+      <TabsHeader className="bg-black/50 border h-auto">
         {categories && categories.map((category, idx) => (
           <Tab
             key={idx}
@@ -34,8 +34,8 @@ export function TabsDefault() {
             onClick={() => setCategory(category.category)}
             className={
               category.category === activeCategory
-                ? "bg-white text-primary md:text-lg font-semibold"
-                : "text-secondary md:text-lg font-semibold hover:text-primary border"
+                ? "bg-white text-primary text-sm md:text-lg font-semibold"
+                : "text-secondary text-sm md:text-lg font-semibold hover:text-primary border"
             }
           >
             {category.category}

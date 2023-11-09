@@ -192,6 +192,16 @@ const Register = () => {
                 src="workatlas.png"
                 alt=""
               />
+              <p
+                className="text-6xl stylish font-extrabold text-center"
+                style={{
+                  background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Work Atlas
+              </p>
             </div>
           </div>
         </div>

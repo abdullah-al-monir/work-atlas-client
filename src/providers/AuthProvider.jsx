@@ -38,13 +38,16 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       const userEmail = currentUser?.email || user?.email;
       const loggedUser = { email: userEmail };
-      setLoading(false);
       if (currentUser) {
         axios
           .post("https://work-atlas-server.vercel.app/jwt", loggedUser, {
             withCredentials: true,
           })
           .then((res) => {
+            if (res.data) {
+              setLoading(false);
+            }
+
             console.log("token response", res.data);
           });
       } else {
@@ -53,6 +56,9 @@ const AuthProvider = ({ children }) => {
             withCredentials: true,
           })
           .then((res) => {
+            if (res.data) {
+              setLoading(false);
+            }
             console.log(res.data);
           });
       }

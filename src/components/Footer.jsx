@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 relative">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <Link to="/" className="flex justify-center items-center gap-2">
+        <Link to="/" className="flex justify-center items-center gap-1">
           <img className="w-auto h-6 sm:h-7" src={logo} alt="" />
           <h2
-            className="font-bold text-lg uppercase"
+            className="font-bold text-2xl uppercase  stylish"
             style={{
               background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
               WebkitBackgroundClip: "text",
@@ -18,7 +18,7 @@ const Footer = () => {
           </h2>
         </Link>
 
-        <p className="mx-auto mt-6 max-w-xl text-center leading-relaxed ">
+        <p className="mx-auto mt-6 max-w-2xl text-center leading-relaxed ">
           Connecting job seekers with dream opportunities and empowering
           employers to find top talent. Making job searching effortless and
           efficient at Work Atlas.

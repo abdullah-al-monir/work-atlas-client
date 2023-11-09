@@ -114,7 +114,7 @@ const Blogs = () => {
               authentication and also deployed my website in the firebase. I
               used some react libraries like react-router, react-helmet,
               react-to-pdf, emailjs, react-tsparticles, material-tailwind,
-              sweetAlert2, react-icons, react-date-picker etc. I also used axios
+              sweetAlert2, react-icons, react-date-picker, framer-motion etc.I used jwt,cookie parser in the backend. I also used axios
               to get the data from api.
             </div>
           </details>

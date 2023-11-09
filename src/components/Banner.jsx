@@ -6,10 +6,11 @@ const Banner = () => {
       <div className="px-10 py-8 h-full max-w-7xl mx-auto">
         <div className="flex flex-col md:mt-20 space-y-3 md:space-y-10 max-w-2xl">
           <h1 className="text-primary text-3xl md:text-5xl lg:text-6xl font-bold garamond ">
-          Anything’s possible when you have the talent
+            Anything’s possible when you have the talent
           </h1>
           <p className="text-primary text-xl md:text-2xl hidden lg:flex">
-          Find skilled candidates, in-demand jobs and the solutions you need to help you do your best work yet.
+            Find skilled candidates, in-demand jobs and the solutions you need
+            to help you do your best work yet.
           </p>
           {/* search */}
           <div className=" flex rounded-full border-2 border-r-0 border-primary max-w-2xl bg-white">

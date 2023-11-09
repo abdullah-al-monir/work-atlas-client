@@ -1,7 +1,6 @@
 
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
-// Create styles
 const styles = StyleSheet.create({
   page: {
     flexDirection: "row",

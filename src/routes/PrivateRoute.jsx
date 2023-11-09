@@ -1,11 +1,11 @@
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext } from "react";
-import { Spinner } from "@material-tailwind/react";
 import Swal from "sweetalert2";
+import { Spinner } from "@material-tailwind/react";
 
 const PrivateRoute = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+  const { user,loading } = useContext(AuthContext);
   const location = useLocation();
   if (loading) {
     return (
