@@ -156,7 +156,7 @@ const Login = () => {
                 alt=""
               />
               <p
-                className="text-6xl stylish font-extrabold text-center"
+                className="text-5xl stylish font-extrabold text-center uppercase"
                 style={{
                   background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
                   WebkitBackgroundClip: "text",

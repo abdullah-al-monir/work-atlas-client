@@ -1,7 +1,6 @@
 const Contact = () => {
   return (
     <div className="my-20 px-5">
-      {/* Particles */}
       {/* Contact */}
       <div className="grid max-w-7xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-white">
         <div className="flex flex-col justify-between">
@@ -9,7 +8,7 @@ const Contact = () => {
             <h2 className="text-4xl font-bold garamond lg:text-5xl text-secondary">
               Let's talk!
             </h2>
-            <div className="">
+            <div className="md:text-lg lg:text-xl">
               Let's connect and explore new career opportunities together.
             </div>
           </div>

@@ -17,7 +17,13 @@ const JobCard = ({ job }) => {
   const deadline = new Date(applicationDeadline);
   return (
     <>
-      <motion.div animate={{ x: [null, 100, 0] }}>
+      <motion.div
+        animate={{ 
+          x: [0, 100, 0],
+          rotate: [0, -15, 0],
+          scale: [1, 1.1, 1],
+        }}
+      >
         <div className=" border border-gray-200 rounded-lg shadow-lg p-4 mb-4">
           <img
             className="mb-5 rounded-t-lg h-auto md:h-60 mx-auto w-full"
@@ -32,8 +38,12 @@ const JobCard = ({ job }) => {
 
           <div className="my-4">
             <p className="text-white flex gap-2">
-              <span className="font-semibold">Company: </span>{companyLogo ? <img src={companyLogo} className="h-5 bg-white" alt="" /> : <p className="text-secondary">Self</p>}
-              
+              <span className="font-semibold">Company: </span>
+              {companyLogo ? (
+                <img src={companyLogo} className="h-5 bg-white" alt="" />
+              ) : (
+                <p className="text-secondary">Self</p>
+              )}
             </p>
             <p className="text-white">
               <span className="font-semibold">Salary Range:</span> $

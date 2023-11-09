@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className="  bg-banner bg-cover h-80 md:h-[850px] relative">
       <div className="px-10 py-8 h-full max-w-7xl mx-auto">
-        <div className="flex flex-col md:mt-20 space-y-3 md:space-y-10 max-w-2xl">
+        <div className="flex flex-col mt-10 md:mt-20 space-y-5 md:space-y-10 max-w-2xl">
           <h1 className="text-primary text-3xl md:text-5xl lg:text-6xl font-bold garamond ">
             Anything’s possible when you have the talent
           </h1>
@@ -48,8 +48,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 bg-purple-700/50 w-full p-5">
-        <div className="flex items-center justify-between flex-wrap gap-2 max-w-7xl mx-auto md:my-10">
+      <div className="md:absolute bottom-0 bg-purple-700/50 w-full p-5">
+        <div className="flex md:items-center justify-between flex-col md:flex-row gap-2 max-w-7xl mx-auto md:my-10">
           <div>
             <h2 className="text-white text-xl md:text-4xl font-semibold">
               Experience the new way to work
