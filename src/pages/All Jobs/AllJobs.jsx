@@ -27,9 +27,8 @@ const AllJobs = () => {
   }, [setLoading]);
 
   const handleChange = (e) => {
-    const newValue = e.target.value.trim();
+    const newValue = e.target.value;
     setSearch(newValue);
-
     if (newValue === "") {
       axios
         .get(`https://work-atlas-server.vercel.app/allJobs`, {
@@ -53,7 +52,9 @@ const AllJobs = () => {
         });
     }
   };
-  const handleSearch = () => {
+
+  const handleSearch = (e) => {
+    e.preventDefault();
     setLoading(true);
     axios
       .get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`, {
@@ -80,7 +81,10 @@ const AllJobs = () => {
                 All Jobs
               </h4>
             </div>
-            <div className="relative flex w-4/6 md:w-8/12  max-w-[20rem]">
+            <form
+              onSubmit={handleSearch}
+              className="relative flex w-4/6 md:w-8/12  max-w-[20rem]"
+            >
               <Input
                 type="text"
                 label="Search by Job title"
@@ -93,7 +97,7 @@ const AllJobs = () => {
               />
               <Button
                 size="sm"
-                onClick={handleSearch}
+                type="Submit"
                 className={`!absolute right-1 top-1 rounded   ${
                   search === ""
                     ? "bg-secondary hover:bg-primary"
@@ -102,7 +106,7 @@ const AllJobs = () => {
               >
                 Search
               </Button>
-            </div>
+            </form>
           </div>
           <div>
             {noDataFound ? (
