@@ -1,13 +1,26 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import { Spinner } from "@material-tailwind/react";
 
 const ServiceJobs = () => {
   const [serviceJobs, setServiceJobs] = useState([]);
+  const { loading, setLoading } = useContext(AuthContext);
   useEffect(() => {
     axios
       .get("https://work-atlas-server.vercel.app/jobServices")
-      .then((res) => setServiceJobs(res.data));
-  }, []);
+      .then((res) => {
+        setServiceJobs(res.data);
+        setLoading(false);
+      });
+  }, [setLoading]);
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[100vh]">
+        <Spinner className="h-10 w-10 text-center text-secondary" />
+      </div>
+    );
+  }
   return (
     <div className="max-w-7xl mx-auto p-5 my-20">
       <div className="text-center my-10 mx-5">

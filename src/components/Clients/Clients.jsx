@@ -1,14 +1,24 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FiCheckSquare } from "react-icons/fi";
+import { AuthContext } from "../../providers/AuthProvider";
+import { Spinner } from "@material-tailwind/react";
 const Clients = () => {
   const [clients, setClients] = useState([]);
+  const { loading, setLoading } = useContext(AuthContext);
   useEffect(() => {
-    axios
-      .get("https://work-atlas-server.vercel.app/clients")
-      .then((res) => setClients(res.data));
-  }, []);
-  console.log(clients);
+    axios.get("https://work-atlas-server.vercel.app/clients").then((res) => {
+      setClients(res.data);
+      setLoading(false);
+    });
+  }, [setLoading]);
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[100vh]">
+        <Spinner className="h-10 w-10 text-center text-secondary" />
+      </div>
+    );
+  }
   return (
     <div className="my-20 max-w-7xl px-5 text-white mx-auto">
       <div>
