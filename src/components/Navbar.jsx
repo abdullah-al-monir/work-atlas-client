@@ -8,6 +8,7 @@ function Navbar() {
   const { user, logOut } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -17,6 +18,11 @@ function Navbar() {
     navigate("/");
     Swal.fire("Success!", "User logged out successfully", "success");
   };
+  useEffect(() => {
+    if (user) {
+      setLoading(false);
+    }
+  }, [user]);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -149,6 +155,7 @@ function Navbar() {
       )}
     </>
   );
+
   return (
     <nav
       className={` bg-white shadow shadow-secondary z-50 border-b-2 border-b-primary  ${
@@ -233,7 +240,14 @@ function Navbar() {
           </ul>
         </div>
         <div>
-          {user ? (
+          {loading ? (
+            <div>
+              <img className="h-14 mx-auto"
+                src="https://cdn.dribbble.com/users/1787505/screenshots/7300251/media/a351d9e0236c03a539181b95faced9e0.gif"
+                alt=""
+              />
+            </div>
+          ) : user ? (
             <div className="lg:flex items-center gap-2 hidden ">
               <div className="group inline-block relative">
                 <img
