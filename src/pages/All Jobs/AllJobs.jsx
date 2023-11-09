@@ -15,36 +15,37 @@ const AllJobs = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://work-atlas-server.vercel.app/allJobs`,{withCredentials: true}).then((res) => {
-      setJobs(res.data);
-      setLoading(false);
-      window.scrollTo(0, 0);
-    });
-  }, [setLoading]);
-  const handleSearch = () => {
-    setLoading(true);
     axios
-      .get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`,{withCredentials: true})
+      .get(`https://work-atlas-server.vercel.app/allJobs`, {
+        withCredentials: true,
+      })
       .then((res) => {
         setJobs(res.data);
         setLoading(false);
-        setNoDataFound(res.data.length === 0);
+        window.scrollTo(0, 0);
       });
-  };
+  }, [setLoading]);
 
   const handleChange = (e) => {
     const newValue = e.target.value.trim();
     setSearch(newValue);
 
     if (newValue === "") {
-      axios.get(`https://work-atlas-server.vercel.app/allJobs`, {withCredentials: true}).then((res) => {
-        setJobs(res.data);
-        setLoading(false);
-        setNoDataFound(res.data.length === 0);
-      });
+      axios
+        .get(`https://work-atlas-server.vercel.app/allJobs`, {
+          withCredentials: true,
+        })
+        .then((res) => {
+          setJobs(res.data);
+          setLoading(false);
+          setNoDataFound(res.data.length === 0);
+        });
     } else {
       axios
-        .get(`https://work-atlas-server.vercel.app/allJobs?search=${newValue}`, {withCredentials: true})
+        .get(
+          `https://work-atlas-server.vercel.app/allJobs?search=${newValue}`,
+          { withCredentials: true }
+        )
         .then((res) => {
           setJobs(res.data);
           setLoading(false);
@@ -52,6 +53,19 @@ const AllJobs = () => {
         });
     }
   };
+  const handleSearch = () => {
+    setLoading(true);
+    axios
+      .get(`https://work-atlas-server.vercel.app/allJobs?search=${search}`, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        setJobs(res.data);
+        setLoading(false);
+        setNoDataFound(res.data.length === 0);
+      });
+  };
+
   return (
     <div>
       {loading ? (

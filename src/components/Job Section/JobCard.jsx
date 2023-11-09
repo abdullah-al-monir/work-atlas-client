@@ -19,8 +19,6 @@ const JobCard = ({ job }) => {
     <>
       <motion.div
         animate={{ 
-          x: [0, 100, 0],
-          rotate: [0, -15, 0],
           scale: [1, 1.1, 1],
         }}
       >
