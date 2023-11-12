@@ -1,6 +1,6 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
-import { useContext,  useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { BsInfoCircle } from "react-icons/bs";
@@ -49,7 +49,6 @@ const JobDetails = () => {
   const closeModal = () => {
     setIsOpen(false);
   };
-
   const handleApplyJob = (e) => {
     e.preventDefault();
     const resume = e.target.resume.value;
@@ -65,7 +64,6 @@ const JobDetails = () => {
       jobBanner,
       postedBy,
     };
-
     axios
       .post("https://work-atlas-server.vercel.app/appliedJobs", appliedJob)
       .then(() => {
@@ -81,12 +79,13 @@ const JobDetails = () => {
     axios.patch(`https://work-atlas-server.vercel.app/applied/${_id}`, job);
     // send Email
     const emailInfo = {
-      email: user.email,
+      user_email: user.email,
       name: user.displayName,
       position: jobTitle,
       ceo: postedBy,
       resume,
     };
+
     emailjs
       .send(
         "service_fqemrm5",
@@ -97,6 +96,7 @@ const JobDetails = () => {
       .then(
         (result) => {
           console.log(result.text);
+
           console.log("Email send successfully");
         },
         (error) => {
@@ -109,7 +109,10 @@ const JobDetails = () => {
       <div className="overflow-hidden max-w-2xl bg-white rounded-lg shadow-md dark:bg-gray-800 mx-auto">
         <img
           className="object-cover w-full md:h-96"
-          src={jobBanner}
+          src={
+            jobBanner ||
+            "https://www.creativefabrica.com/wp-content/uploads/2021/07/03/we-are-hiring-job-vacancy-template-Graphics-14216159-1.jpg"
+          }
           alt="Article"
         />
 
@@ -121,7 +124,11 @@ const JobDetails = () => {
               </span>
               {category !== ("On SIte Job" || "Remote Job") && <span>Job</span>}
               <p>by</p>
-              <img className="h-6" src={companyLogo} alt="" />
+              {companyLogo ? (
+                <img src={companyLogo} className="h-5 bg-white" alt="" />
+              ) : (
+                <p className="text-secondary">Self</p>
+              )}
             </div>
             <p className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600">
               {jobTitle}
