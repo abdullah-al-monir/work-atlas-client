@@ -52,11 +52,11 @@ const MyJobs = () => {
           {jobs.length > 0 ? (
             <section className="container px-4 mx-auto mt-10">
               <div className="flex items-center gap-x-3">
-                <h2 className="text-xl font-medium text-secondary">
+                <h2 className="text-xl font-semibold text-primary">
                   Jobs posted by {user.displayName}
                 </h2>
 
-                <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full  ">
+                <span className="px-3 py-1 text-xs text-blue-700 bg-blue-50 rounded-full  font-semibold">
                   {jobs.length} Jobs
                 </span>
               </div>
@@ -70,7 +70,7 @@ const MyJobs = () => {
                           <tr>
                             <th
                               scope="col"
-                              className="py-3.5 px-4 text-secondary "
+                              className="py-3.5 px-4 text-primary "
                             >
                               <div className="flex items-center gap-x-3">
                                 <span>Job</span>
@@ -79,7 +79,7 @@ const MyJobs = () => {
 
                             <th
                               scope="col"
-                              className="px-2 md:px-4 py-3.5  text-secondary text-center"
+                              className="px-2 md:px-4 py-3.5  text-primary text-center"
                             >
                               <button className="">
                                 <span>Job Type</span>
@@ -88,7 +88,7 @@ const MyJobs = () => {
 
                             <th
                               scope="col"
-                              className="px-4 py-3.5 text-secondary text-center "
+                              className="px-4 py-3.5 text-primary text-center "
                             >
                               <button className="">
                                 <span>Application Deadline</span>
@@ -96,7 +96,7 @@ const MyJobs = () => {
                             </th>
                             <th
                               scope="col"
-                              className="relative py-3.5 px-4 text-right text-secondary"
+                              className="relative py-3.5 px-4 text-right text-primary"
                             >
                               <span>Edit</span>
                             </th>

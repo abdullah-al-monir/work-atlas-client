@@ -70,7 +70,7 @@ const AddJob = () => {
   return (
     <div className="my-10">
       <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md">
-        <h2 className="text-2xl font-semibold text-primary">
+        <h2 className="text-2xl font-semibold text-secondary">
           Fill the form to post a job
         </h2>
 
@@ -81,7 +81,7 @@ const AddJob = () => {
               <input
                 type="text"
                 name="jobTitle"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Enter the job title"
                 required
               />
@@ -92,14 +92,14 @@ const AddJob = () => {
                 type="text"
                 defaultValue={user.displayName}
                 name="postedBy"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 disabled
               />
             </div>
             <div>
               <label className="text-gray-700">Job Type</label>
               <select
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 name="category"
                 value={selectedCategory}
                 onChange={handleCategoryChange}
@@ -119,7 +119,7 @@ const AddJob = () => {
               <input
                 type="text"
                 name="salaryRange"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Enter the salary range"
                 required
               />
@@ -130,7 +130,7 @@ const AddJob = () => {
               <input
                 type="text"
                 name="jobDetails"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Write the job description"
               />
             </div>
@@ -138,10 +138,10 @@ const AddJob = () => {
             <div>
               <label className="text-gray-700">Posting Date</label>
               <DatePicker
-                className="block w-full my-2 text-gray-700 bg-white   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full my-2 text-gray-700 bg-white   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 name="postingDate"
                 calendarIcon={
-                  <BsCalendar3 className="text-primary text-xl my-1.5" />
+                  <BsCalendar3 className="text-secondary text-xl my-1.5" />
                 }
                 yearPlaceholder="yyyy"
                 monthPlaceholder="mm"
@@ -156,13 +156,13 @@ const AddJob = () => {
             <div>
               <label className="text-gray-700 mr-2">Application Deadline</label>
               <DatePicker
-                className="block w-full my-2 text-gray-700 bg-white   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full my-2 text-gray-700 bg-white   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 name="applicationDeadline"
                 calendarIcon={
-                  <BsCalendar3 className="text-primary text-xl my-1" />
+                  <BsCalendar3 className="text-secondary text-xl my-1" />
                 }
                 clearIcon={
-                  <AiOutlineCloseSquare className="text-primary text-2xl my-1" />
+                  <AiOutlineCloseSquare className="text-secondary text-2xl my-1" />
                 }
                 yearPlaceholder="yyyy"
                 monthPlaceholder="mm"
@@ -180,7 +180,7 @@ const AddJob = () => {
                 type="text"
                 name="NumberOfApplicants"
                 defaultValue={0}
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 disabled
               />
             </div>
@@ -189,7 +189,7 @@ const AddJob = () => {
               <input
                 type="text"
                 name="jobBanner"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black  focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Job banner image link"
               />
             </div>
@@ -198,7 +198,7 @@ const AddJob = () => {
               <input
                 type="text"
                 name="companyLogo"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-primary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-black   focus:border-secondary focus:ring-secondary focus:ring-opacity-40  focus:outline-none focus:ring"
                 placeholder="Company logo image link"
               />
             </div>
@@ -208,7 +208,7 @@ const AddJob = () => {
             <input
               type="submit"
               value="Add"
-              className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 font-semibold transform bg-primary rounded-md hover:bg-secondary focus:outline-none focus:bg-secondary"
+              className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 font-semibold transform bg-secondary rounded-md hover:bg-primary focus:outline-none focus:bg-secondary"
             />
           </div>
         </form>

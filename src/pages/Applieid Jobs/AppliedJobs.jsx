@@ -97,31 +97,31 @@ const AppliedJobs = () => {
             <div>
               <div id="table" className="flex flex-col mt-6">
                 <div className="">
-                  <h2 className="text-2xl font-medium text-white text-center py-5 bg-primary">
+                  <h2 className="text-2xl font-semibold text-white text-center py-5 bg-secondary rounded-t-lg">
                     Jobs Applied by {user.displayName}
                   </h2>
                 </div>
                 <div className="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
-                  <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                  <div className="inline-block min-w-full py-2 align-middle px-6 lg:px-8">
                     <div className="overflow-hidden border border-black  md:rounded-lg">
                       <table className="min-w-full divide-y">
                         <thead className="bg-black">
-                          <tr className="px-5 text-center">
-                            <th className="px-4 py-3.5  text-left  text-secondary">
+                          <tr className="px-5 text-center md:text-lg">
+                            <th className="px-4 py-3.5  text-left  text-primary">
                               Job Info
                             </th>
 
-                            <th className="py-3.5 text-left  text-secondary">
+                            <th className="py-3.5 text-left  text-primary">
                               Company
                             </th>
-                            <th className="md:py-3.5 text-left  text-secondary md:text-right lg:text-center">
+                            <th className="md:py-3.5 text-left  text-primary md:text-right lg:text-center">
                               <p className="hidden md:block">Salary</p>
                             </th>
 
-                            <th className="lg:py-3.5  text-left  text-secondary ">
+                            <th className="lg:py-3.5  text-left  text-primary ">
                               <p className="hidden lg:block">Job Type</p>
                             </th>
-                            <th className="md:py-3.5  text-left  text-secondary ">
+                            <th className="md:py-3.5  text-left  text-primary ">
                               <p className="hidden lg:block">Date Applied</p>
                             </th>
                           </tr>
@@ -190,7 +190,7 @@ const AppliedJobs = () => {
                                   {job.category}
                                 </p>
                               </td>
-                              <td className="lg:py-4 text-sm text-blue-500 font-semibold ">
+                              <td className="lg:py-4 text-sm text-secondary font-semibold ">
                                 <p className="hidden lg:block">
                                   {job.applyDate.slice(0, 10)}
                                 </p>

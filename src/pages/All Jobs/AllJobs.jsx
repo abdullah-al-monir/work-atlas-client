@@ -75,7 +75,7 @@ const AllJobs = () => {
         </div>
       ) : (
         <div className="max-w-7xl mx-auto mb-10">
-          <div className="mt-10 w-full px-5 flex justify-between  items-center gap-5 flex-wrap-reverse bg-white py-2 pt-10">
+          <div className="mt-10 px-5 w-full flex justify-between  items-center gap-5 flex-wrap-reverse bg-white py-2 pt-10">
             <div>
               <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary uppercase">
                 All Jobs
@@ -116,7 +116,7 @@ const AllJobs = () => {
             ) : (
               <div>
                 <div className="container  mx-auto">
-                  <h2 className="p-2 text-2xl font-semibold bg-white">
+                  <h2 className="p-2 pl-5 text-2xl font-semibold bg-white">
                     Jobs found: {jobs.length}
                   </h2>
                   <div className="overflow-x-auto">
@@ -129,7 +129,7 @@ const AllJobs = () => {
                         <col />
                         <col className="w-24" />
                       </colgroup>
-                      <thead className="bg-black text-secondary border">
+                      <thead className="bg-black text-primary border">
                         <tr className="text-left">
                           <th className="p-3 md:text-lg">Role</th>
                           <th className="p-3 md:text-lg">Posted by</th>
@@ -199,7 +199,7 @@ function TableRow({
       <td className="p-3 text-right">
         <span className="px-3 py-1 font-semibold rounded-md">
           <Link to={`/job/${id}`}>
-            <button className="py-1 px-2 bg-primary rounded-md text-white hover:bg-secondary duration-300 transform">
+            <button className="py-1 px-2 bg-secondary rounded-md text-white hover:bg-primary duration-300 transform">
               {details}
             </button>
           </Link>

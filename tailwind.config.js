@@ -5,8 +5,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: "#9f00a5",
-        secondary: "#d62fb3",
+        primary: "#4cc9f0",
+        secondary: "#0466c8",
       },
       backgroundImage: {
         banner:

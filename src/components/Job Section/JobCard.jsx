@@ -31,7 +31,7 @@ const JobCard = ({ job }) => {
             }
             alt=""
           />
-          <h2 className="text-xl font-semibold text-secondary">{jobTitle}</h2>
+          <h2 className="text-xl font-semibold text-primary">{jobTitle}</h2>
           <p className="text-white">posted by: {postedBy}</p>
 
           <div className="my-4">
@@ -40,7 +40,7 @@ const JobCard = ({ job }) => {
               {companyLogo ? (
                 <img src={companyLogo} className="h-5 bg-white" alt="" />
               ) : (
-                <p className="text-secondary">Self</p>
+                <p className="text-primary">Self</p>
               )}
             </p>
             <p className="text-white">
@@ -52,7 +52,7 @@ const JobCard = ({ job }) => {
                 <span>per hour</span>
               )}
             </p>
-            <p className="text-secondary font-semibold">
+            <p className="text-primary font-semibold">
               <span className="text-white ">Posted Date:</span> {postingDate}
             </p>
             <p

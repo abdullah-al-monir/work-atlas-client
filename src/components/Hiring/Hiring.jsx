@@ -23,7 +23,7 @@ const Hiring = () => {
     <div className="max-w-7xl mx-auto px-5 my-10">
       <div className="text-center my-10 mx-5">
         <button
-          className="px-4 py-2 text-2xl md:text-4xl text-white bg-primary rounded-lg font-bold"
+          className="p-5 text-2xl md:text-4xl text-white bg-secondary rounded-lg font-bold"
           disabled
         >
           Hiring Trends & Insights
@@ -37,7 +37,7 @@ const Hiring = () => {
               src={hiring.img}
               alt=""
             />
-            <h3 className="text-2xl font-bold text-secondary garamond my-2">
+            <h3 className="text-2xl font-bold text-primary garamond my-2">
               {hiring.title}
             </h3>
             <p className="text-white">{hiring.shortDetails}</p>

@@ -34,8 +34,8 @@ export function TabsDefault() {
             onClick={() => setCategory(category.category)}
             className={
               category.category === activeCategory
-                ? "bg-white text-primary text-sm md:text-lg font-semibold"
-                : "text-secondary text-sm md:text-lg font-semibold hover:text-primary border"
+                ? "bg-white text-secondary text-sm md:text-lg font-semibold"
+                : "text-primary text-sm md:text-lg font-semibold hover:text-secondary border"
             }
           >
             {category.category}

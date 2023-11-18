@@ -9,7 +9,7 @@ const Footer = () => {
           <h2
             className="font-bold text-2xl uppercase  stylish"
             style={{
-              background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
+              background: `linear-gradient(90deg, #0466c8, #4cc9f0)`,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -24,10 +24,10 @@ const Footer = () => {
           efficient at Work Atlas.
         </p>
 
-        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 font-semibold">
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               About
@@ -36,7 +36,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               Careers
@@ -45,7 +45,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               History
@@ -54,7 +54,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               Services
@@ -63,7 +63,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               Projects
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <li>
             <a
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
               href="/"
             >
               Blog
@@ -86,7 +86,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
             >
               <span className="sr-only">Facebook</span>
               <svg
@@ -109,7 +109,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -132,7 +132,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
             >
               <span className="sr-only">Twitter</span>
               <svg
@@ -151,7 +151,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -174,7 +174,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary transition hover:text-primary/75"
+              className="text-secondary transition hover:text-primary/75"
             >
               <span className="sr-only">Dribbble</span>
               <svg

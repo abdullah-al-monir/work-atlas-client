@@ -25,7 +25,7 @@ const ServiceJobs = () => {
     <div className="max-w-7xl mx-auto p-5 my-20">
       <div className="text-center my-10 mx-5">
         <button
-          className="px-4 py-2 text-2xl md:text-4xl text-white bg-primary rounded-lg font-bold"
+          className="p-5 text-2xl md:text-4xl text-white bg-secondary rounded-lg font-bold"
           disabled
         >
           Searching for job?
@@ -51,7 +51,7 @@ const ServiceJobs = () => {
                 {job.title}
               </h1>
               <p className="text-lg text-white">{job.shortDetails}</p>
-              <button className="text-xl font-semibold text-white px-4 py-2 bg-primary hover:bg-secondary duration-300 transform rounded-lg">
+              <button className="text-xl font-semibold text-white px-4 py-2 bg-secondary hover:bg-primary duration-300 transform rounded-lg">
                 {job.button}
               </button>
             </div>

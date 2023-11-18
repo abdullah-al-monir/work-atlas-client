@@ -123,7 +123,7 @@ function Navbar() {
           <li>
             <button
               onClick={handleLogOut}
-              className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg lg:hidden mx-4 my-1 duration-300"
+              className="font-semibold text-white bg-secondary hover:bg-primary py-2 px-4 rounded-lg lg:hidden mx-4 my-1 duration-300"
             >
               Log Out
             </button>
@@ -139,7 +139,7 @@ function Navbar() {
                   ? "pending"
                   : isActive
                   ? " block  bg-secondary py-1 px-4  rounded-lg"
-                  : " block  bg-primary hover:bg-secondary py-1 px-4 rounded-lg duration-300"
+                  : " block  bg-secondary hover:bg-primary py-1 px-4 rounded-lg duration-300"
               }
             >
               Login
@@ -152,18 +152,18 @@ function Navbar() {
 
   return (
     <nav
-      className={` bg-white shadow shadow-secondary z-50 border-b-2 border-b-primary  ${
+      className={` bg-black shadow shadow-secondary z-50 border-b-2 border-b-primary  ${
         isSticky ? "sticky top-0" : ""
       }`}
     >
       <div className="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img className="w-auto h-6 sm:h-7" src={logo} alt="" />
+            <img className="w-auto h-8 mr-2" src={logo} alt="" />
             <h2
               className="font-extrabold text-2xl uppercase stylish"
               style={{
-                background: `linear-gradient(90deg, #9f00a5, #d62fb3)`,
+                background: `linear-gradient(90deg, #0466c8, #4cc9f0)`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -182,9 +182,9 @@ function Navbar() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
-                  fill="#9f00a5"
+                  fill="#4cc9f0"
                   viewBox="0 0 24 24"
-                  stroke="#9f00a5"
+                  stroke="#4cc9f0"
                   strokeWidth="2"
                 >
                   <path
@@ -197,9 +197,9 @@ function Navbar() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
-                  fill="#9f00a5"
+                  fill="#4cc9f0"
                   viewBox="0 0 24 24"
-                  stroke="#9f00a5"
+                  stroke="#4cc9f0"
                   strokeWidth="2"
                 >
                   <path
@@ -227,7 +227,7 @@ function Navbar() {
         <div
           className={`${
             isOpen ? "translate-x-0 opacity-100" : "opacity-0 -translate-x-full"
-          } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center `}
+          } absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-black lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center `}
         >
           <ul className="flex flex-col lg:flex-row lg:mx-6 lg:text-lg font-semibold">
             {navLinks}
@@ -256,7 +256,7 @@ function Navbar() {
               </div>
               <button
                 onClick={handleLogOut}
-                className="font-semibold text-white bg-primary hover:bg-secondary py-2 px-4 rounded-lg  duration-300"
+                className="font-semibold text-white bg-secondary hover:bg-primary py-2 px-4 rounded-lg  duration-300"
               >
                 Log Out
               </button>
@@ -270,7 +270,7 @@ function Navbar() {
                     ? "pending"
                     : isActive
                     ? " block  bg-secondary py-2 px-4  rounded-lg"
-                    : " block  bg-primary hover:bg-secondary py-2 px-4 rounded-lg duration-300"
+                    : " block  bg-secondary hover:bg-primary py-2 px-4 rounded-lg duration-300"
                 }
               >
                 Login

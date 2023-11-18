@@ -119,7 +119,7 @@ const JobDetails = () => {
         <div className="p-6">
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-sm font-medium text-primary uppercase">
+              <span className="text-sm font-semibold text-secondary uppercase">
                 {category}
               </span>
               {category !== ("On SIte Job" || "Remote Job") && <span>Job</span>}
@@ -164,7 +164,7 @@ const JobDetails = () => {
               </div>
               <p className="mx-1 text-xs text-black ">
                 Posted in:{" "}
-                <span className="text-primary font-semibold text-sm">
+                <span className="text-secondary font-semibold text-sm">
                   {postingDate}
                 </span>
               </p>
@@ -172,7 +172,7 @@ const JobDetails = () => {
                 Application Deadline:{" "}
                 <span
                   className={`${
-                    deadline < presentDate ? "text-red-500 " : "text-[#50C878]"
+                    deadline < presentDate ? "text-red-600 " : "text-[#50C878]"
                   } font-semibold text-sm`}
                 >
                   {applicationDeadline}
@@ -182,7 +182,7 @@ const JobDetails = () => {
           </div>
           <button
             onClick={openModal}
-            className="bg-primary hover:bg-secondary text-white font-semibold px-4 py-2 rounded-lg mt-5 duration-300"
+            className="bg-secondary hover:bg-primary text-white font-semibold px-4 py-2 rounded-lg mt-5 duration-300"
           >
             Apply
           </button>
