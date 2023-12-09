@@ -1,3 +1,6 @@
+# Technologies
+ReactJs, TailwindCSS, Firebase, MongoDB, ExpressJs, NodeJs, JWT, React to PDF, and Email Js.
+
 # Features
 
 Here My website name is Work Atlas. Here you can search for jobs and also post for jobs. In this website total 7 pages in the navbar.
