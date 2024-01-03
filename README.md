@@ -3,7 +3,7 @@ ReactJs, TailwindCSS, Firebase, MongoDB, ExpressJs, NodeJs, JWT, React to PDF, a
 
 # Features
 
-Here My website name is Work Atlas. Here you can search for jobs and also post for jobs. In this website total 7 pages in the navbar.
+Here My website name is Work Atlas. Here you can search for jobs and also post for jobs. In this website total 6 pages in the navbar.
 
 ## Home
   There are total 6 sections in the homepage:
@@ -17,9 +17,6 @@ Here My website name is Work Atlas. Here you can search for jobs and also post f
 ## All Jobs
   In this page anyone can see how many jobs were posted here in a table. There is also a search option . Where you can search for job by job title. In each single row of the table , there is a details button for every jobs. By clicking this button user will redirected to job details page if logged in.
 
-## Blogs
-  In this page there is a accordion where I answered some questions and also explain my code.
-
 ## Applied Jobs (Private route)
   In this page, user can see the all job for which he/she applied. All jobs are visible in a table . User can also filter the jobs by selecting job type.
 
@@ -30,7 +27,7 @@ Here My website name is Work Atlas. Here you can search for jobs and also post f
   In this page the user can see the only jobs which are added by him/her. The job are visible in a table where each row represents each job. In each row user can edit or delete the job by clicking icons. If she/he clicked the delete button then the job is deleted from the database and removed from the table. If he/she clicked edit button then the user redirected to the update page. In the update page user can update some job info excluding posted date, his/her name.
 
 ## Login
-  In this page there a form for login where there is another login option. You can login here by using google acount. If you don't have account then you can click the register text and redirected to register page and by giving some info  in the form you can register your account.
+  In this page there a form for login where there is another login option. You can login here by using google account. If you don't have account then you can click the register text and redirected to register page and by giving some info  in the form you can register your account.
 
 
 ## Live Link : 

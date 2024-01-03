@@ -64,20 +64,6 @@ function Navbar() {
       </li>
       <li>
         <NavLink
-          to="/blogs"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent  md:p-0 text-secondary mx-1.5 sm:mx-6"
-              : " block py-1 lg:py-2 pl-3 pr-4 md:bg-transparent text-primary hover:text-secondary md:p-0 mx-1.5 sm:mx-6"
-          }
-        >
-          Blogs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/appliedJobs"
           className={({ isActive, isPending }) =>
             isPending
